@@ -23,6 +23,12 @@ dependencies:
   flutter_screenutil: ^5.9.0
   #?  go_router is a Flutter package that allows you to easily manage your app's navigation.
   go_router: ^8.0.1
+  #? flutter_svg is a Flutter package for drawing SVG pictures.
+  flutter_svg: ^2.0.6
+  #? google_fonts is a Flutter package that provides a set of fonts from Google Fonts.
+  google_fonts: ^5.0.0
+  #? freezed_annotation is a Dart package that provides a set of utilities for generating code for the freezed package.
+  freezed_annotation: ^2.2.0
 
   flutter_native_splash:
     ^2.2.16
@@ -32,6 +38,10 @@ dependencies:
 dev_dependencies:
   flutter_lints: ^2.0.0
   very_good_analysis: ^4.0.0+1
+  #? freezed is a code generation library for Dart that helps you to write immutable models with ease.
+  freezed: ^2.3.2
+  #? build_runner is a Dart package that provides a concrete way of generating files using Dart code, outside of tools like pub and the Dart VM.
+  build_runner: ^2.3.3
 
   
 
