@@ -10,7 +10,7 @@ class AppColors {
   static const Color primaryColor = Color(0xFF000000);
   static const Color primaryBackgroundColor = Color(0xFFFAFAFA);
   static const Color secondaryColor = Color(0xFF2B64E3);
-  static const Color secondaryTextColor = Color(0xFF8E9BAE);
+  static const Color secondaryTextColor = Color(0xFF626F84);
   static const Color grey100 = Color(0xFF5C5C5C);
   static const Color grey200 = Color(0xFFE7E7E7);
   static const Color grey300 = Color(0xFFAAAAAA);
@@ -26,6 +26,7 @@ class AppColors {
   static const Color warningColor = Color.fromARGB(0, 214, 203, 45);
   static const Color transparent = Colors.transparent;
   static const Color textHintColor = Color(0xFFA6B7D4);
+  static const Color purpleColor = Color(0xFF5A42DE);
 
 
 }
