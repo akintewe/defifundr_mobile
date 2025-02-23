@@ -25,5 +25,7 @@ class AppColors {
   static const Color borderColor = Color(0xFFE2E8F0);
   static const Color warningColor = Color.fromARGB(0, 214, 203, 45);
   static const Color transparent = Colors.transparent;
+  static const Color textHintColor = Color(0xFFA6B7D4);
+
 
 }

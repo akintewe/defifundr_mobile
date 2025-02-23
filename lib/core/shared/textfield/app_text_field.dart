@@ -1,144 +1,101 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants/size.dart';
 import '../../themes/color_scheme.dart';
 
-class AppTextField extends StatelessWidget {
-  final String? labelText;
-  final String? initialValue;
-  final Widget? suffixIcon;
-  final TextInputType? inputType;
-  final String? Function(String? input)? validator;
-  final Function(String input)? onChanged;
-  final Function(String?)? onSaved;
-  final Function(String)? onFieldSubmitted;
-  final TextCapitalization textCapitalization;
-  final Function()? onEditingComplete;
-  final List<TextInputFormatter>? inputFormatters;
-  final TextInputAction? textInputAction;
-  final int? maxLines;
-  final FocusNode? focusNode;
-  final bool enableInteractiveSelection;
-  final TextAlign textAlign;
-  final String? hintText;
-  final String label;
-  final bool? obscureText;
-  final Widget? prefixIcon;
-  final TextEditingController? controller;
-  final bool enabled;
-  final bool? readOnly;
-  final void Function()? onTap;
 
-  const AppTextField(
-      {Key? key,
-        this.labelText,
-        this.initialValue,
-        this.suffixIcon,
-        this.inputType,
-        this.textCapitalization = TextCapitalization.none,
-        this.onChanged,
-        this.onEditingComplete,
-        this.onSaved,
-        this.validator,
-        this.inputFormatters,
-        this.label = '',
-        this.maxLines = 1,
-        this.focusNode,
-        this.textAlign = TextAlign.start,
-        this.obscureText = false,
-        this.enableInteractiveSelection = true,
-        this.hintText,
-        this.prefixIcon,
-        this.controller,
-        this.readOnly = false,
-        this.onTap,
-        this.enabled = true,
-        this.onFieldSubmitted,
-        this.textInputAction})
-      : super(key: key);
+class AppTextField extends StatefulWidget {
+  final String label;
+  final bool isPassword;
+  final TextEditingController controller;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
+  final VoidCallback? onSuffixIconPressed;
+  final FocusNode? focusNode;
+  final List<TextInputFormatter>? inputFormatters;
+  final TextInputType? keyboardType;
+
+  const AppTextField({
+    Key? key,
+    required this.label,
+    this.isPassword = false,
+    required this.controller,
+    this.prefixIcon,
+    this.suffixIcon,
+    this.onSuffixIconPressed,
+    this.focusNode,
+    this.inputFormatters,
+    this.keyboardType,
+  }) : super(key: key);
+
+  @override
+  _AppTextFieldState createState() => _AppTextFieldState();
+}
+
+class _AppTextFieldState extends State<AppTextField> {
+  late FocusNode _focusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = widget.focusNode ?? FocusNode();
+    _focusNode.addListener(_onFocusChange);
+  }
+
+  @override
+  void dispose() {
+    _focusNode.removeListener(_onFocusChange);
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _onFocusChange() {
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextFormField(
-          controller: controller,
-          onSaved: onSaved,
-          onEditingComplete: onEditingComplete,
-          cursorColor: AppColors.grey100.withOpacity(0.5),
-          obscureText: obscureText!,
-          enableInteractiveSelection: enableInteractiveSelection,
-          maxLines: maxLines,
-          readOnly: readOnly!,
-          focusNode: focusNode,
-          enableIMEPersonalizedLearning: true,
-          enableSuggestions: true,
-          onFieldSubmitted: onFieldSubmitted,
-          textCapitalization: textCapitalization,
-          obscuringCharacter: '*',
-          inputFormatters: inputFormatters,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          initialValue: initialValue,
-          keyboardType: inputType,
-          textAlign: textAlign,
-          textInputAction: textInputAction,
-          enabled: enabled,
-          style: Config.b2(context).copyWith(
-            color: AppColors.primaryColor,
-          ),
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(20),
-            fillColor: AppColors.textfieldColor,
-            focusColor: AppColors.white100,
-            filled: true,
-            label: Text(
-              hintText!,
-              style: Config.b3(context).copyWith(
-                color: AppColors.grey100.withAlpha(100),
+    return Container(
+      height: 64,
+      decoration: BoxDecoration(
+        color:  Colors.white,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextFormField(
+              controller: widget.controller,
+              obscureText: widget.isPassword,
+              focusNode: widget.focusNode ?? _focusNode,
+              style: Config.b2(context).copyWith(
+                color: AppColors.primaryColor,
+              ),
+              obscuringCharacter: '*',
+              inputFormatters: widget.inputFormatters,
+              keyboardType: widget.keyboardType,
+              decoration: InputDecoration(
+                labelText: widget.label,
+                labelStyle: Config.b3(context).copyWith(
+                color: AppColors.textHintColor,
+               ),
+                filled: true,
+                fillColor: Colors.transparent,
+                isDense: true,
+                border: InputBorder.none,
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 2.0, horizontal: 10.0),
+                suffixIcon: widget.suffixIcon,
+                prefixIcon: widget.prefixIcon,
+
               ),
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.sp),
-              borderSide: BorderSide(
-                color: AppColors.grey200.withOpacity(0.5),
-                width: 1.sp,
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.sp),
-              borderSide: BorderSide(
-                color: AppColors.grey200.withOpacity(0.5),
-                width: 1.sp,
-              ),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.sp),
-              borderSide: BorderSide(
-                color: AppColors.errorColor,
-                width: 1.sp,
-              ),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.sp),
-              borderSide: BorderSide(
-                color: AppColors.white100,
-                width: 1.sp,
-              ),
-            ),
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon,
-            labelText: labelText,
-            hintText: label == '' ? 'Enter $hintText' : '$hintText',
-            hintStyle: Config.b3(context).copyWith(
-              color: AppColors.grey100.withAlpha(100),
-            ),
-          ),
-          onChanged: onChanged,
-          validator: validator,
-          onTap: onTap,
+          ],
         ),
-      ],
+      ),
     );
   }
 }
