@@ -19,7 +19,7 @@ class AppRouter {
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: ForgotPasswordScreen(
+              child: LetsGetToKnowYouScreen(
                
               ),
               transitionsBuilder:

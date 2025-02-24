@@ -3,6 +3,7 @@ import 'package:defifundr_mobile/%20core/constants/app_texts.dart';
 import 'package:defifundr_mobile/%20core/constants/assets.dart';
 import 'package:defifundr_mobile/%20core/constants/color_scheme.dart';
 import 'package:defifundr_mobile/%20core/constants/size.dart';
+import 'package:defifundr_mobile/%20core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/%20core/shared/button/buttons.dart';
 import 'package:defifundr_mobile/%20core/shared/textfield/textfield.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/states/lets_get_to_know_you/lets_get_to_know_you_bloc.dart';
@@ -12,14 +13,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LetGetStartedScreen extends StatefulWidget {
-  const LetGetStartedScreen({Key? key}) : super(key: key);
+class LetsGetToKnowYouScreen extends StatefulWidget {
+  const LetsGetToKnowYouScreen({Key? key}) : super(key: key);
 
   @override
-  State<LetGetStartedScreen> createState() => _LetGetStartedScreenState();
+  State<LetsGetToKnowYouScreen> createState() => _LetsGetToKnowYouScreenState();
 }
 
-class _LetGetStartedScreenState extends State<LetGetStartedScreen> {
+class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
@@ -39,22 +40,17 @@ class _LetGetStartedScreenState extends State<LetGetStartedScreen> {
           )),
       body: BlocListener<LetsGetToKnowYouBloc, LetsGetToKnowYouState>(
         listener: (context, state) {
-          if (state is LetsGetToKnowYouError) {
-            print(state.message);
-           context.showToast(
-                  title:state.message,
-                  context: context,
-                  toastDurationInSeconds: 1,
-                  isSuccess: false,
+            if (state is LetsGetToKnowYouError) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(state.message), backgroundColor: AppColors.errorColor),
                 );
-         
-          }
-            context.showToast(
-                  title:AppTexts.signUpSuccess,
-                  context: context,
-                  toastDurationInSeconds: 1,
-                  isSuccess: true,
-                );
+              } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(AppTexts.signUpSuccess), backgroundColor: AppColors.successColor),
+              );
+            }
+            
+     
         
         },
         child: SafeArea(
@@ -67,13 +63,13 @@ class _LetGetStartedScreenState extends State<LetGetStartedScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      AppTexts.letGetStartedTitle,
+                      AppTexts.LetsGetToKnowYouTitle,
                       style: TextStyle(
                           fontSize: 22.sp, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      AppTexts.letGetStartedSub,
+                      AppTexts.LetsGetToKnowYouSub,
                       style: TextStyle(fontSize: 14.sp, color: Colors.grey),
                     ),
                     SizedBox(height: 30.h),

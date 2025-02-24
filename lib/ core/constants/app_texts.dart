@@ -139,8 +139,8 @@ class AppTexts {
   static String passcode = "Passcode";
 
     // ! let's get started
-static String letGetStartedTitle="Lets Get to know you";
-static String letGetStartedSub="Securely access your account and manage payroll with ease.";
+static String LetsGetToKnowYouTitle="Lets Get to know you";
+static String LetsGetToKnowYouSub="Securely access your account and manage payroll with ease.";
 static String email="Email";
 static String istName="Enter First Name";
 static String lastName="Enter Last Name";
