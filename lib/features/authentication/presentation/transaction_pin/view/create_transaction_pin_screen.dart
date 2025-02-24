@@ -44,7 +44,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
       decoration: BoxDecoration(
         border: Border.all(
           color: isActive ? const Color(0xFFA6B7D4) : const Color(0xFFA6B7D4),
-          width: 1,
+          width: 2,
         ),
         borderRadius: BorderRadius.circular(12),
       ),
