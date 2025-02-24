@@ -46,7 +46,7 @@ class AppButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 5.sp, vertical: 10.sp),
       child: Container(
-        height: 58.sp,
+        height: 48.sp,
         width: (context.screenWidth() * 0.85),
         decoration: BoxDecoration(
           color: isActive! ? color : AppColors.grey200,

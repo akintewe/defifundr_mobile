@@ -24,9 +24,10 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
+  final TextEditingController _selectedGender = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey();
   bool _agreeToTerms = false;
-  String? _selectedGender;
+
 
   @override
   Widget build(BuildContext context) {
@@ -62,14 +63,19 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // app icon
+                    SvgPicture.asset(AppAssets.appIcon,
+                   
+                          fit: BoxFit.scaleDown),
+                    SizedBox(height: 8.h),
                     Text(
-                      AppTexts.LetsGetToKnowYouTitle,
+                      AppTexts.letsGetToKnowYouTitle,
                       style: TextStyle(
                           fontSize: 22.sp, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      AppTexts.LetsGetToKnowYouSub,
+                      AppTexts.letsGetToKnowYouSub,
                       style: TextStyle(fontSize: 14.sp, color: Colors.grey),
                     ),
                     SizedBox(height: 30.h),
@@ -98,55 +104,13 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                       fillColor: AppColors.white,
                     ),
                     SizedBox(height: 15.h),
-                    // AppTextField(
-                    //   controller: _genderController,
-                    //   hintText: AppTexts.gender,
-
-                    //        fillColor: AppColors.white,
-                    // ),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        color: AppColors.white,
-                        borderRadius: BorderRadius.circular(16),
-
-                        // Optional border
-                      ),
-                      child: DropdownButtonFormField<String>(
-                        value: _selectedGender,
-                        items: [AppTexts.male, AppTexts.female]
-                            .map((String gender) {
-                          return DropdownMenuItem(
-                              value: gender,
-                              child: Text(
-                                gender,
-                                style: TextStyle(
-                                  fontSize: 12.sp,
-                                ),
-                              ));
-                        }).toList(),
-                        onChanged: (value) {
-                          setState(() {
-                            _selectedGender = value;
-                          });
-                        },
-                        decoration: InputDecoration(
-                          labelText: AppTexts.gender,
-                          labelStyle: TextStyle(
-                            fontSize: 12.sp,
-                          ),
-                          filled: false,
-                          fillColor: AppColors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16.sp),
-                            borderSide:
-                                BorderSide.none, // Removes default border
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 22.sp, vertical: 12),
-                        ),
-                      ),
+                    AppTextField(
+                      
+                      controller: _selectedGender,
+                      hintText: AppTexts.gender,
+                           fillColor: AppColors.white,
                     ),
+
                     SizedBox(height: 20.h),
                     Row(
                       children: [
@@ -196,21 +160,22 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     ),
                     SizedBox(height: 20.h),
                     AppButton(
-                      text: AppTexts.continueTo,
+                      text: AppTexts.continueButton,
                       textColor: AppColors.white200,
-                      borderRadius: 47.sp,
+                      borderRadius: 48.sp,
                       onTap: () {
                         context.read<LetsGetToKnowYouBloc>().add(
                               ValidateSignUp(
                                 email: _emailController.text,
                                 firstName: _firstNameController.text,
                                 lastName: _lastNameController.text,
-                                gender: _selectedGender ?? "",
+                                gender: _selectedGender.text,
                                 agreeToTerms: _agreeToTerms,
                               ),
                             );
                       },
                       textSize: 14.sp,
+                      
                       color: AppColors.primaryColor,
                     ),
                   ],
