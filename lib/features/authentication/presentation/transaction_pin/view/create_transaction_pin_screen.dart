@@ -38,21 +38,21 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
 
   Widget _buildPinDot(bool isActive) {
     return Container(
-      width: 56,
-      height: 56,
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: 48,
+      height: 48,
+      margin: const EdgeInsets.symmetric(horizontal: 6),
       decoration: BoxDecoration(
         border: Border.all(
           color: isActive ? const Color(0xFFA6B7D4) : const Color(0xFFA6B7D4),
-          width: 2,
+          width: 1,
         ),
         borderRadius: BorderRadius.circular(12),
       ),
       child: isActive
           ? Center(
               child: Container(
-                width: 12,
-                height: 12,
+                width: 8,
+                height: 8,
                 decoration: const BoxDecoration(
                   color: Color(0xFFA6B7D4),
                   shape: BoxShape.circle,
@@ -64,20 +64,26 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
   }
 
   Widget _buildNumberButton(String number) {
-    return TextButton(
-      onPressed: () => _onNumberPressed(number),
-      style: TextButton.styleFrom(
-        padding: const EdgeInsets.all(20),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+    return Container(
+      width: 72,
+      height: 72,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: const Color(0xFF666666).withOpacity(0.05),
       ),
-      child: Text(
-        number,
-        style: const TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.w500,
-          color: Color(0xFF1A1A1A),
+      child: TextButton(
+        onPressed: () => _onNumberPressed(number),
+        style: TextButton.styleFrom(
+          shape: const CircleBorder(),
+          padding: EdgeInsets.zero,
+        ),
+        child: Text(
+          number,
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+            color: Color(0xFF1A1A1A),
+          ),
         ),
       ),
     );
@@ -97,6 +103,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
             child: Container(
+              height: 36,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -108,7 +115,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
               child: TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -118,8 +125,8 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                   children: [
                     SvgPicture.asset(
                       'assets/icons/headset.svg',
-                      width: 20,
-                      height: 20,
+                      width: 16,
+                      height: 16,
                       colorFilter: const ColorFilter.mode(
                         Color(0xFF1A1A1A),
                         BlendMode.srcIn,
@@ -130,7 +137,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                       'Need Help?',
                       style: TextStyle(
                         color: Color(0xFF1A1A1A),
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -147,12 +154,12 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 24),
+              const SizedBox(height: 40),
               const Text(
                 'Create transaction pin',
                 style: TextStyle(
                   fontSize: 24,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w700,
                   color: Color(0xFF1A1A1A),
                 ),
               ),
@@ -165,7 +172,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                   height: 1.5,
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
@@ -173,7 +180,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                   (index) => _buildPinDot(index < _pin.length),
                 ),
               ),
-              const Spacer(),
+              const SizedBox(height: 70),
               Column(
                 children: [
                   Row(
@@ -184,7 +191,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                       _buildNumberButton('3'),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -193,7 +200,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                       _buildNumberButton('6'),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -202,14 +209,19 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                       _buildNumberButton('9'),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const SizedBox(width: 80),
+                      const SizedBox(width: 72),
                       _buildNumberButton('0'),
-                      SizedBox(
-                        width: 80,
+                      Container(
+                        width: 72,
+                        height: 72,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: const Color(0xFF666666).withOpacity(0.05),
+                        ),
                         child: IconButton(
                           onPressed: _onBackspace,
                           icon: const Icon(
@@ -222,7 +234,7 @@ class _CreateTransactionPinScreenState extends State<CreateTransactionPinScreen>
                   ),
                 ],
               ),
-              const SizedBox(height: 24),
+              const Spacer(),
               Container(
                 width: double.infinity,
                 height: 56,
