@@ -27,13 +27,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   bool _agreeToTerms = false;
 
-  bool get _isFormValid {
-    return _emailController.text.isNotEmpty &&
-        _firstNameController.text.isNotEmpty &&
-        _lastNameController.text.isNotEmpty &&
-        _selectedGender.text.isNotEmpty &&
-        _agreeToTerms;
-  }
+  
 
   void _updateButtonState() {
     setState(() {}); // Triggers UI rebuild when any field changes
@@ -186,10 +180,8 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     AppButton(
                       text: AppTexts.continueButton,
                       textColor: AppColors.white200,
-                      isActive: _isFormValid,
                       borderRadius: 48.sp,
-                      onTap: _isFormValid
-                          ? () {
+                      onTap: () {
                               context.read<LetsGetToKnowYouBloc>().add(
                                     ValidateSignUp(
                                       email: _emailController.text,
@@ -200,11 +192,10 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                                     ),
                                   );
                             }
-                          : null, // Disable the button
+                         , // Disable the button
                       textSize: 14.sp,
-                      color: _isFormValid
-                          ? AppColors.primaryColor
-                          : AppColors.grey300, // Grey ut if inactive
+                      color: AppColors.primaryColor
+                          , // Grey ut if inactive
                     ),
                   ],
                 ),
