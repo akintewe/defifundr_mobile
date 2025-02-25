@@ -1,4 +1,4 @@
-import 'package:defifundr_mobile/%20core/routers/_routes.dart';
+import 'package:defifundr_mobile/core/routers/_routes.dart';
 import 'package:defifundr_mobile/bloc_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
