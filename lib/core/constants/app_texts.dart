@@ -168,4 +168,7 @@ class AppTexts {
   static String passwordReset = "Password Reset";
   static String passwordResetSuccessfully =
       "Password has been reset successfully, You can proceed to login with your new Password.";
+  static String verifyOtp = "Verify OTP";
+  static String enterOtpCode =
+      "Enter the OTP code sent to the email ending with";
 }
