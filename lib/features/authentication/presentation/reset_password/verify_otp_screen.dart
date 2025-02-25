@@ -5,6 +5,8 @@ import 'package:defifundr_mobile/core/shared/auth_header.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pinput/pinput.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -12,6 +14,16 @@ class VerifyOtpScreen extends StatefulWidget {
   @override
   State<VerifyOtpScreen> createState() => _VerifyOtpScreenState();
 }
+
+final defaultPinTheme = PinTheme(
+  width: 44,
+  height: 44,
+  textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+  decoration: BoxDecoration(
+    border: Border.all(color: AppColors.textHintColor, width: 2),
+    borderRadius: BorderRadius.circular(10),
+  ),
+);
 
 class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   @override
@@ -39,7 +51,24 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                 Text(
                   'test@defifundr.com',
                   style: Config.b3(context).copyWith(
-                    color: AppColors.secondaryTextColor,
+                    color: AppColors.black200,
+                  ),
+                ),
+                VerticalMargin(0.08.sh),
+                Pinput(
+                  length: 6,
+                  defaultPinTheme: defaultPinTheme,
+                  disabledPinTheme: defaultPinTheme.copyWith(
+                    decoration: BoxDecoration(
+                      color: Color(0xffA6B7D4),
+                    ),
+                  ),
+                ),
+                VerticalMargin(0.12.sh),
+                Center(
+                  child: Text(
+                    AppTexts.resendCode,
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 AppButton(
