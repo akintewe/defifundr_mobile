@@ -165,4 +165,7 @@ class AppTexts {
   static String passwordMatch = "Password match";
   static String enterPassword = "Enter password";
   static String continuee = "Continue";
+  static String passwordReset = "Password Reset";
+  static String passwordResetSuccessfully =
+      "Password has been reset successfully, You can proceed to login with your new Password.";
 }
