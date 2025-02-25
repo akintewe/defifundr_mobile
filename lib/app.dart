@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart'
-    show BouncingScrollPhysics, BuildContext, Colors, MaterialApp, ScrollBehavior, ScrollPhysics, StatelessWidget, ThemeData, Widget;
+    show
+        BouncingScrollPhysics,
+        BuildContext,
+        Colors,
+        MaterialApp,
+        ScrollBehavior,
+        ScrollPhysics,
+        StatelessWidget,
+        ThemeData,
+        Widget;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routers/_routes.dart';
 
-
 class App extends ConsumerStatefulWidget {
   const App({super.key});
 
   @override
   ConsumerState<App> createState() => _AppState();
-
 }
 
 class _AppState extends ConsumerState<App> {
