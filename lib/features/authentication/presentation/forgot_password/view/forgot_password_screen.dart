@@ -42,15 +42,19 @@ class _ResetEmailScreenState extends State<ForgotPasswordScreen> {
         create: (_) => ForgotPasswordBloc(),
         child: BlocConsumer<ForgotPasswordBloc, ForgotPasswordState>(
             listener: (context, state) {
-              if (state is ForgotPasswordError) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.error), backgroundColor: AppColors.errorColor),
-                );
-              } else if (state is ForgotPasswordSuccess) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.message), backgroundColor: AppColors.successColor),
-                );
-              }
+          if (state is ForgotPasswordError) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                  content: Text(state.error),
+                  backgroundColor: AppColors.errorColor),
+            );
+          } else if (state is ForgotPasswordSuccess) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                  content: Text(state.message),
+                  backgroundColor: AppColors.successColor),
+            );
+          }
         }, builder: (context, state) {
           return Container(
             decoration: BoxDecoration(
@@ -85,7 +89,11 @@ class _ResetEmailScreenState extends State<ForgotPasswordScreen> {
                     ),
                   ),
                   leading: IconButton(
-                    icon: Icon(Icons.arrow_back, color: AppColors.black100),
+                    icon: SvgPicture.asset(
+                      AppAssets
+                          .backArrow, // Make sure this is the correct asset path
+                     
+                    ),
                     onPressed: () => Navigator.pop(context),
                   ),
                   actions: [
@@ -154,12 +162,11 @@ class _ResetEmailScreenState extends State<ForgotPasswordScreen> {
                           VerticalMargin(20),
                           VerticalMargin(10),
                           AppButton(
-                            isActive: isValidate.value,
                             text: AppTexts.forgotPasswordButton,
                             onTap: () {
-                                 context.read<ForgotPasswordBloc>().add(
-                          SubmitEmail(_emailController.text),
-                        );
+                              context.read<ForgotPasswordBloc>().add(
+                                    SubmitEmail(_emailController.text),
+                                  );
                             },
                             textSize: 12,
                             borderRadius: 47.sp,
