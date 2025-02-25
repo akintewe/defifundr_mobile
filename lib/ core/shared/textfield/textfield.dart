@@ -128,6 +128,7 @@ class AppTextField extends StatelessWidget {
               borderSide: BorderSide(
                 color: AppColors.white100,
                 width: 1.sp,
+              
               ),
             ),
             prefixIcon: prefixIcon,
