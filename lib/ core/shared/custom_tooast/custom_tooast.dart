@@ -1,7 +1,7 @@
 // 🐦 Flutter imports:
-import 'package:defifundr_mobile/%20core/constants/assets.dart';
-import 'package:defifundr_mobile/%20core/constants/color_scheme.dart';
-import 'package:defifundr_mobile/%20core/constants/size.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/color_scheme.dart';
+import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 📦 Package imports:

@@ -1,7 +1,7 @@
-import 'package:defifundr_mobile/%20core/constants/app_texts.dart';
-import 'package:defifundr_mobile/%20core/constants/assets.dart';
-import 'package:defifundr_mobile/%20core/constants/color_scheme.dart';
-import 'package:defifundr_mobile/%20core/constants/size.dart';
+import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/color_scheme.dart';
+import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/%20core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/%20core/shared/button/buttons.dart';
 import 'package:defifundr_mobile/%20core/shared/textfield/textfield.dart';

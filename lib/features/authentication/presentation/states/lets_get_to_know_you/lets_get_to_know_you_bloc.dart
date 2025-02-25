@@ -23,8 +23,8 @@ class LetsGetToKnowYouBloc extends Bloc<LetsGetToKnowYouEvent, LetsGetToKnowYouS
         emit(LetsGetToKnowYouError("Last name must be at least 3 characters"));
         return;
       }
-      if (event.gender.isEmpty || (event.gender != "Male" && event.gender != "Female")) {
-        emit(LetsGetToKnowYouError("Please select a valid gender"));
+      if (event.gender.isEmpty) {
+        emit(LetsGetToKnowYouError("Please enter your gender"));
         return;
       }
       if (!event.agreeToTerms) {

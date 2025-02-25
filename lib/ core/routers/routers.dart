@@ -15,7 +15,7 @@ class AppRouter {
    
       GoRoute(
           path: '/',
-          name: RouteConstants.forgotPassword,
+          name: RouteConstants.letsGetToKnowYou,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
