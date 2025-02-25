@@ -13,6 +13,8 @@ class AppAssets {
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
 
-
+  static const background = '${defifundrImagePath}background.png';
+  static const logo = '${defifundrImagePath}logo.png';
+  static const rocket = '${defifundrImagePath}rocket.png';
 
 }
