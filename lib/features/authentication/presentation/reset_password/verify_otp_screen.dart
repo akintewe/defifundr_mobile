@@ -72,7 +72,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                   ),
                 ),
                 AppButton(
-                    text: AppTexts.continueText,
+                    text: AppTexts.confirmOtp,
                     color: AppColors.primaryColor,
                     textColor: AppColors.white100,
                     onTap: () {})

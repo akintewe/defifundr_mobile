@@ -166,10 +166,14 @@ class AppTexts {
   static String enterPassword = "Enter password";
   static String continuee = "Continue";
   static String passwordReset = "Password Reset";
+  static String forgetPassword = "Forget Password";
   static String passwordResetSuccessfully =
       "Password has been reset successfully, You can proceed to login with your new Password.";
   static String verifyOtp = "Verify OTP";
   static String resendCode = "Resend code 60secs";
   static String enterOtpCode =
       "Enter the OTP code sent to the email ending with";
+  static String oppsDontWorry = "Ooops! don’t worry,";
+  static String theProcessIsSimpler = "the process is simpler than you thought";
+  static String confirmOtp = "Confirm OTP";
 }
