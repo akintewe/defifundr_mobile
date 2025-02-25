@@ -2,21 +2,26 @@ part of '_routes.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
-  static final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
   static final GoRouter _router = GoRouter(
-      debugLogDiagnostics: true,
-      initialLocation: RouteConstants.initial,
-
-      navigatorKey: _rootNavigatorKey,
-      routes: [
-        GoRoute(
+    debugLogDiagnostics: true,
+    initialLocation: RouteConstants.initial,
+    redirect: (context, state) async {
+      return null;
+  
+    },
+    navigatorKey: _rootNavigatorKey,
+    routes: [
+   
+      GoRoute(
           path: '/',
-          name: RouteConstants.initial,
+          name: RouteConstants.forgotPassword,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: const ForgotPasswordScreen(),
+              child: ForgotPasswordScreen(
+               
+              ),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 // Change the opacity of the screen using a Curve based on the the animation's
@@ -28,11 +33,9 @@ class AppRouter {
                 );
               },
             );
-          },
-        ),
-      ]
+          }),
+       ],
   );
 
   static GoRouter get router => _router;
-
 }
