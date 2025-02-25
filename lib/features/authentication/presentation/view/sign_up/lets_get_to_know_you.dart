@@ -1,4 +1,3 @@
-
 import 'package:defifundr_mobile/%20core/constants/app_texts.dart';
 import 'package:defifundr_mobile/%20core/constants/assets.dart';
 import 'package:defifundr_mobile/%20core/constants/color_scheme.dart';
@@ -28,6 +27,35 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   bool _agreeToTerms = false;
 
+  bool get _isFormValid {
+    return _emailController.text.isNotEmpty &&
+        _firstNameController.text.isNotEmpty &&
+        _lastNameController.text.isNotEmpty &&
+        _selectedGender.text.isNotEmpty &&
+        _agreeToTerms;
+  }
+
+  void _updateButtonState() {
+    setState(() {}); // Triggers UI rebuild when any field changes
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _emailController.addListener(_updateButtonState);
+    _firstNameController.addListener(_updateButtonState);
+    _lastNameController.addListener(_updateButtonState);
+    _selectedGender.addListener(_updateButtonState);
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _selectedGender.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,18 +69,19 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
           )),
       body: BlocListener<LetsGetToKnowYouBloc, LetsGetToKnowYouState>(
         listener: (context, state) {
-            if (state is LetsGetToKnowYouError) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.message), backgroundColor: AppColors.errorColor),
-                );
-              } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(AppTexts.signUpSuccess), backgroundColor: AppColors.successColor),
-              );
-            }
-            
-     
-        
+          if (state is LetsGetToKnowYouError) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                  content: Text(state.message),
+                  backgroundColor: AppColors.errorColor),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                  content: Text(AppTexts.signUpSuccess),
+                  backgroundColor: AppColors.successColor),
+            );
+          }
         },
         child: SafeArea(
           child: Padding(
@@ -63,10 +92,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // app icon
-                    SvgPicture.asset(AppAssets.appIcon,
-                   
-                          fit: BoxFit.scaleDown),
+                    SvgPicture.asset(AppAssets.appIcon, fit: BoxFit.scaleDown),
                     SizedBox(height: 8.h),
                     Text(
                       AppTexts.letsGetToKnowYouTitle,
@@ -76,7 +102,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     SizedBox(height: 8.h),
                     Text(
                       AppTexts.letsGetToKnowYouSub,
-                      style: TextStyle(fontSize: 14.sp, color: Colors.grey),
+                      style: TextStyle(fontSize: 14.sp, color: AppColors.grey300),
                     ),
                     SizedBox(height: 30.h),
                     AppTextField(
@@ -105,18 +131,20 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     ),
                     SizedBox(height: 15.h),
                     AppTextField(
-                      
                       controller: _selectedGender,
                       hintText: AppTexts.gender,
-                           fillColor: AppColors.white,
+                      fillColor: AppColors.white,
                     ),
-
                     SizedBox(height: 20.h),
                     Row(
                       children: [
                         Checkbox(
-                          activeColor: Colors.black,
+                          activeColor: AppColors.primaryColor,
                           value: _agreeToTerms,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                4), // Set border radius to 4
+                          ),
                           onChanged: (value) {
                             setState(() {
                               _agreeToTerms = value ?? false;
@@ -127,7 +155,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                           child: RichText(
                             text: TextSpan(
                               style: TextStyle(
-                                  fontSize: 12.sp, color: Colors.grey),
+                                  fontSize: 12.sp, color: AppColors.subtextGreyColor),
                               children: [
                                 TextSpan(text: AppTexts.tacText),
                                 TextSpan(
@@ -136,9 +164,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                                       color: AppColors.primaryColor,
                                       fontWeight: FontWeight.bold),
                                   recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // Handle Terms of Service tap
-                                    },
+                                    ..onTap = () {},
                                 ),
                                 TextSpan(text: " and "),
                                 TextSpan(
@@ -147,9 +173,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                                       color: AppColors.primaryColor,
                                       fontWeight: FontWeight.bold),
                                   recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // Handle Privacy Policy tap
-                                    },
+                                    ..onTap = () {},
                                 ),
                                 TextSpan(text: "."),
                               ],
@@ -162,21 +186,25 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     AppButton(
                       text: AppTexts.continueButton,
                       textColor: AppColors.white200,
+                      isActive: _isFormValid,
                       borderRadius: 48.sp,
-                      onTap: () {
-                        context.read<LetsGetToKnowYouBloc>().add(
-                              ValidateSignUp(
-                                email: _emailController.text,
-                                firstName: _firstNameController.text,
-                                lastName: _lastNameController.text,
-                                gender: _selectedGender.text,
-                                agreeToTerms: _agreeToTerms,
-                              ),
-                            );
-                      },
+                      onTap: _isFormValid
+                          ? () {
+                              context.read<LetsGetToKnowYouBloc>().add(
+                                    ValidateSignUp(
+                                      email: _emailController.text,
+                                      firstName: _firstNameController.text,
+                                      lastName: _lastNameController.text,
+                                      gender: _selectedGender.text,
+                                      agreeToTerms: _agreeToTerms,
+                                    ),
+                                  );
+                            }
+                          : null, // Disable the button
                       textSize: 14.sp,
-                      
-                      color: AppColors.primaryColor,
+                      color: _isFormValid
+                          ? AppColors.primaryColor
+                          : AppColors.grey300, // Grey ut if inactive
                     ),
                   ],
                 ),
