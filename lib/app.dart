@@ -1,18 +1,60 @@
-import 'package:flutter/material.dart';
-import 'features/authentication/presentation/transaction_pin/view/create_transaction_pin_screen.dart';
+import 'package:flutter/material.dart'
+    show BouncingScrollPhysics, BuildContext, Colors, MaterialApp, ScrollBehavior, ScrollPhysics, StatelessWidget, ThemeData, Widget;
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class App extends StatelessWidget {
+import 'core/routers/_routes.dart';
+
+
+class App extends ConsumerStatefulWidget {
   const App({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
+  ConsumerState<App> createState() => _AppState();
+
+}
+
+class _AppState extends ConsumerState<App> {
+  @override
+  void initState() {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.light,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ),
+    );
+
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: const Size(410, 890),
+      minTextAdapt: true,
+      splitScreenMode: false,
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
+        title: 'DeFiFundr',
+        scrollBehavior: const _AppScrollBehavior(),
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.white,
-          ),
+          primarySwatch: Colors.grey,
         ),
-        home: const CreateTransactionPinScreen(),
-      );
+        routeInformationProvider: AppRouter.router.routeInformationProvider,
+        routeInformationParser: AppRouter.router.routeInformationParser,
+        routerDelegate: AppRouter.router.routerDelegate,
+      ),
+    );
+  }
+}
+
+class _AppScrollBehavior extends ScrollBehavior {
+  const _AppScrollBehavior();
+
+  @override
+  ScrollPhysics getScrollPhysics(BuildContext context) {
+    return const BouncingScrollPhysics();
+  }
 }
