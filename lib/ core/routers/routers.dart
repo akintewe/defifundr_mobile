@@ -14,7 +14,7 @@ class AppRouter {
     routes: [
    
       GoRoute(
-          path: '/letsGetToKnowYou',
+          path: '/',
           name: RouteConstants.letsGetToKnowYou,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
