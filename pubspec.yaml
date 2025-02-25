@@ -38,6 +38,7 @@ dependencies:
   #? freezed_annotation is a Dart package that provides a set of utilities for generating code for the freezed package.
   freezed_annotation: ^2.2.0
 
+
   flutter_native_splash:
     ^2.2.16
   get_it: ^8.0.3
