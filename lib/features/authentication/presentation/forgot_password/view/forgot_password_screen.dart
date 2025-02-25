@@ -56,130 +56,77 @@ class _ResetEmailScreenState extends State<ForgotPasswordScreen> {
             );
           }
         }, builder: (context, state) {
-          return Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  AppColors.gradientColor, // Adjust based on your image
-                  AppColors.grey400, // Adjust based on your image
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+          return Stack(
+            children: [
+              Positioned.fill(
+                child: Image.asset(
+                  AppAssets.backgroundImage, // Your SVG background asset
+                  fit: BoxFit.cover, // Ensures it fills the entire screen
+                ),
               ),
-            ),
-            child: Scaffold(
-              backgroundColor:
-                  AppColors.transparent, // Make Scaffold background transparent
-              appBar: PreferredSize(
-                preferredSize: Size(context.screenWidth(), 60),
-                child: AppBar(
-                  backgroundColor:
-                      AppColors.transparent, // Make AppBar transparent
-                  elevation: 0, // Remove shadow
-                  flexibleSpace: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          AppColors.gradientColor, // Adjust based on your image
-                          AppColors.grey400, // Adjust based on your image
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
+              Scaffold(
+                backgroundColor:
+                    Colors.transparent, // Make Scaffold transparent
+                appBar: PreferredSize(
+                  preferredSize: Size(context.screenWidth(), 60),
+                  child: AppBar(
+                    backgroundColor: Colors.transparent,
+                    elevation: 0,
+                    leading: IconButton(
+                      icon: SvgPicture.asset(AppAssets.backArrow),
+                      onPressed: () => Navigator.pop(context),
                     ),
                   ),
-                  leading: IconButton(
-                    icon: SvgPicture.asset(
-                      AppAssets
-                          .backArrow, // Make sure this is the correct asset path
-                     
-                    ),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                  actions: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 25.sp),
-                      child: Container(
-                        width: 107.sp,
-                        height: 34.sp,
-                        decoration: BoxDecoration(
-                          color: AppColors.transparent,
-                          border: Border.all(
-                            color: AppColors.borderColor, // Border color
-                            width: 1, // Border width
-                          ),
-                          borderRadius:
-                              BorderRadius.circular(20), // Set border radius
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                body: SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 25, vertical: 50),
+                    child: SingleChildScrollView(
+                      child: Form(
+                        key: _formKey,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SvgPicture.asset(
-                              AppAssets.headSetIcon,
-                              fit: BoxFit.scaleDown,
-                            ),
-                            HorizontalMargin(6),
-                            Text(AppTexts.neeHelp,
-                                style: Config.h2(context).copyWith(
-                                  fontSize: 10,
+                            Text(AppTexts.forgotPassword,
+                                style:
+                                    Config.h2(context).copyWith(fontSize: 24)),
+                            VerticalMargin(5),
+                            Text(AppTexts.forgotPasswordDesc,
+                                style: Config.b3(context).copyWith(
+                                  color: AppColors.grey100,
                                 )),
+                            VerticalMargin(50),
+                            AppTextField(
+                              controller: _emailController,
+                              hintText: AppTexts.forgetPasswordLogin,
+                              inputType: TextInputType.emailAddress,
+                              focusNode: _emailNode,
+                              prefixIcon: SvgPicture.asset(AppAssets.userIcon,
+                                  fit: BoxFit.scaleDown),
+                            ),
+                            VerticalMargin(20),
+                            AppButton(
+                              text: AppTexts.forgotPasswordButton,
+                              onTap: () {
+                                context.read<ForgotPasswordBloc>().add(
+                                      SubmitEmail(_emailController.text),
+                                    );
+                              },
+                              textSize: 12,
+                              borderRadius: 47.sp,
+                              textColor: AppColors.white100,
+                              color: AppColors.primaryColor,
+                            ),
+                           
                           ],
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              body: SafeArea(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
-                  child: SingleChildScrollView(
-                    child: Form(
-                      key: _formKey,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(AppTexts.forgotPassword,
-                              style: Config.h2(context).copyWith(fontSize: 24)),
-                          VerticalMargin(5),
-                          Text(AppTexts.forgotPasswordDesc,
-                              style: Config.b3(context).copyWith(
-                                color: AppColors.grey100,
-                              )),
-                          // vertical space
-                          VerticalMargin(50),
-                          AppTextField(
-                            controller: _emailController,
-                            hintText: AppTexts.forgetPasswordLogin,
-                            inputType: TextInputType.emailAddress,
-                            textCapitalization: TextCapitalization.none,
-                            focusNode: _emailNode,
-                            textInputAction: TextInputAction.next,
-                            prefixIcon: SvgPicture.asset(AppAssets.userIcon,
-                                fit: BoxFit.scaleDown),
-                          ),
-                          VerticalMargin(20),
-                          VerticalMargin(10),
-                          AppButton(
-                            text: AppTexts.forgotPasswordButton,
-                            onTap: () {
-                              context.read<ForgotPasswordBloc>().add(
-                                    SubmitEmail(_emailController.text),
-                                  );
-                            },
-                            textSize: 12,
-                            borderRadius: 47.sp,
-                            textColor: AppColors.white100,
-                            color: AppColors.primaryColor,
-                          )
-                        ],
-                      ),
-                    ),
                   ),
                 ),
               ),
-            ),
+            ],
           );
         }));
   }

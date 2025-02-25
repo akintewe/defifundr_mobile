@@ -7,4 +7,5 @@ class AppIcons {
   static String lockIcon = '${_baseAssetUrl}lock_icon.svg';
   static String eyeIcon = '${_baseAssetUrl}eye_icon.svg';
   static String crossEyeIcon = '${_baseAssetUrl}cross_eye.svg';
+ 
 }
