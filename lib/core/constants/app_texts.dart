@@ -1,4 +1,20 @@
 class AppTexts {
+  // ! let's get started
+  static String letsGetToKnowYouTitle = "Lets Get to know you";
+  static String letsGetToKnowYouSub =
+      "Securely access your account and manage payroll with ease.";
+  static String email = "Email";
+  static String istName = "Enter First Name";
+  static String lastName = "Enter Last Name";
+  static String gender = "Gender";
+  static String tacText = "By creating an account, you agree to our ";
+  static String tosText = "Terms of Service";
+  static String ppText = "Privacy Policy";
+  static String male = "Male";
+  static String female = "Female";
+  static String signUpSuccess = "Sign-up successful!";
+  static String continueButton = "Continue";
+
   //! AUTHENTICATION
   static String createAccount = "Create an account";
   static String createAccountDescription =
@@ -44,7 +60,7 @@ class AppTexts {
   static String usernameAlreadyTaken = "Username Already Exists";
   static String dashboard = "Get Started";
   static String forgotPassword = "Forget Password";
-  static String neeHelp="Need Help?";
+  static String neeHelp = "Need Help?";
   static String forgotPasswordDesc =
       "Ooops! don’t worry,\nthe process is simpler than you thought";
   static String forgotPasswordButton = "Continue";
@@ -148,4 +164,17 @@ class AppTexts {
   static String atLestOneSpecialChar =
       "At least one special character (!@#\$%^&*)";
   static String passwordMatch = "Password match";
+  static String enterPassword = "Enter password";
+  static String continuee = "Continue";
+  static String passwordReset = "Password Reset";
+  static String forgetPassword = "Forget Password";
+  static String passwordResetSuccessfully =
+      "Password has been reset successfully, You can proceed to login with your new Password.";
+  static String verifyOtp = "Verify OTP";
+  static String resendCode = "Resend code 60secs";
+  static String enterOtpCode =
+      "Enter the OTP code sent to the email ending with";
+  static String oppsDontWorry = "Ooops! don’t worry,";
+  static String theProcessIsSimpler = "the process is simpler than you thought";
+  static String confirmOtp = "Confirm OTP";
 }

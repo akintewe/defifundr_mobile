@@ -1,4 +1,5 @@
 import 'package:defifundr_mobile/bloc_provider.dart';
+import 'package:defifundr_mobile/%20core/routers/_routes.dart';
 import 'package:flutter/material.dart' show BouncingScrollPhysics, BuildContext, Colors, MaterialApp, ScrollBehavior, ScrollPhysics, StatelessWidget, ThemeData, Widget;
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -49,8 +50,13 @@ class _AppState extends ConsumerState<App> {
         ),
       ),
     );
+
+
   }
+
+
 }
+
 
 class _AppScrollBehavior extends ScrollBehavior {
   const _AppScrollBehavior();
