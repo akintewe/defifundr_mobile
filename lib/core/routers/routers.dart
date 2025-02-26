@@ -7,7 +7,6 @@ class AppRouter {
   static final GoRouter _router = GoRouter(
       debugLogDiagnostics: true,
       initialLocation: RouteConstants.initial,
-
       navigatorKey: _rootNavigatorKey,
       routes: [
         GoRoute(
@@ -16,7 +15,7 @@ class AppRouter {
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: const ForgotPasswordScreen(),
+              child: const VerifyOtpScreen(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 // Change the opacity of the screen using a Curve based on the the animation's
@@ -30,9 +29,7 @@ class AppRouter {
             );
           },
         ),
-      ]
-  );
+      ]);
 
   static GoRouter get router => _router;
-
 }
