@@ -32,6 +32,7 @@ class AppTextField extends StatelessWidget {
   final bool enabled;
   final bool? readOnly;
   final void Function()? onTap;
+  final Color? fillColor;
 
   const AppTextField(
       {Key? key,
@@ -58,7 +59,8 @@ class AppTextField extends StatelessWidget {
       this.onTap,
       this.enabled = true,
       this.onFieldSubmitted,
-      this.textInputAction})
+      this.textInputAction,
+      this.fillColor})
       : super(key: key);
 
   @override
@@ -92,7 +94,7 @@ class AppTextField extends StatelessWidget {
           ),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(20),
-            fillColor: AppColors.textfieldColor,
+            fillColor: fillColor ?? AppColors.textfieldColor,
             focusColor: AppColors.white100,
             filled: true,
             label: Text(
