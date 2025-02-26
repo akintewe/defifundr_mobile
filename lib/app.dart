@@ -1,15 +1,7 @@
-import 'package:flutter/material.dart'
-    show
-        BouncingScrollPhysics,
-        BuildContext,
-        Colors,
-        MaterialApp,
-        ScrollBehavior,
-        ScrollPhysics,
-        StatelessWidget,
-        ThemeData,
-        Widget;
+import 'package:defifundr_mobile/bloc_provider.dart';
+import 'package:flutter/material.dart' show BouncingScrollPhysics, BuildContext, Colors, MaterialApp, ScrollBehavior, ScrollPhysics, StatelessWidget, ThemeData, Widget;
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -42,16 +34,19 @@ class _AppState extends ConsumerState<App> {
       designSize: const Size(410, 890),
       minTextAdapt: true,
       splitScreenMode: false,
-      child: MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        title: 'DeFiFundr',
-        scrollBehavior: const _AppScrollBehavior(),
-        theme: ThemeData(
-          primarySwatch: Colors.grey,
+      child: MultiBlocProvider(
+        providers: appProviders,
+        child: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          title: 'DeFiFundr',
+          scrollBehavior: const _AppScrollBehavior(),
+          theme: ThemeData(
+            primarySwatch: Colors.grey,
+          ),
+          routeInformationProvider: AppRouter.router.routeInformationProvider,
+          routeInformationParser: AppRouter.router.routeInformationParser,
+          routerDelegate: AppRouter.router.routerDelegate,
         ),
-        routeInformationProvider: AppRouter.router.routeInformationProvider,
-        routeInformationParser: AppRouter.router.routeInformationParser,
-        routerDelegate: AppRouter.router.routerDelegate,
       ),
     );
   }
