@@ -20,21 +20,25 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     OnboardModel(
       bgImage: AppAssets.onBoardingBg1,
       title: "Pay anyone, anywhere.",
-      text: "Experience Fast, Secure Crypto & Fiat Payroll & Invoicing with Defifundr",
+      text:
+          "Experience Fast, Secure Crypto & Fiat Payroll & Invoicing with Defifundr",
     ),
     OnboardModel(
         bgImage: AppAssets.onBoardingBg1,
-        text: "Set up automated payroll schedules and let our system handle timely, secure payouts in fiat or crypto.",
+        text:
+            "Set up automated payroll schedules and let our system handle timely, secure payouts in fiat or crypto.",
         img: AppAssets.onBoardingFrame1,
         title: "Pay on Time, Every Time"),
     OnboardModel(
         bgImage: AppAssets.onBoardingBg2,
-        text: "Smart contracts ensure tamper-proof payments, reducing disputes and ensuring full transparency.",
+        text:
+            "Smart contracts ensure tamper-proof payments, reducing disputes and ensuring full transparency.",
         img: AppAssets.onBoardingFrame2,
         title: "Secure & Transparent Transactions"),
     OnboardModel(
         bgImage: AppAssets.onBoardingBg2,
-        text: "Get notified about salary payouts, invoice approvals, and compliance updates instantly.",
+        text:
+            "Get notified about salary payouts, invoice approvals, and compliance updates instantly.",
         img: AppAssets.onBoardingFrame3,
         title: "Instant Notifications & Compliance Alerts"),
   ];
@@ -57,7 +61,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(image: DecorationImage(image: AssetImage(currentIndex == 0 ? AppAssets.onBoardingBg1 : AppAssets.onBoardingBg2))),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(currentIndex == 0
+                    ? AppAssets.onBoardingBg1
+                    : AppAssets.onBoardingBg2))),
         child: Column(
           children: [
             SizedBox(height: 70.h),
@@ -66,28 +74,40 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               totalScreens: screens.length,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 18),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 18),
               child: Container(
                 decoration: BoxDecoration(),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset(currentIndex == 0 ? AppAssets.onBoardingLogoWhite : AppAssets.onBoardingLogo),
+                    SvgPicture.asset(currentIndex == 0
+                        ? AppAssets.onBoardingLogoWhite
+                        : AppAssets.onBoardingLogo),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: AppColors.white100.withOpacity(0.24)),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: AppColors.white100.withOpacity(0.24)),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "For Freelancers",
-                            style: Config.h2(context).copyWith(fontWeight: FontWeight.w600, fontSize: 14.sp, color: currentIndex == 0 ? AppColors.white100 : null),
+                            style: Config.h2(context).copyWith(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14.sp,
+                                color: currentIndex == 0
+                                    ? AppColors.white100
+                                    : null),
                           ),
                           2.sbW,
                           Center(
                               child: SvgPicture.asset(
                             AppAssets.arrowRight,
-                            color: currentIndex == 0 ? AppColors.white100 : null,
+                            color:
+                                currentIndex == 0 ? AppColors.white100 : null,
                           ))
                         ],
                       ),
@@ -107,28 +127,42 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   },
                   itemBuilder: (_, index) {
                     return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 32),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 32),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(flex: 1, child: Container()),
                           if (screens[index].img != null)
                             Center(
-                              child: Container(padding: const EdgeInsets.symmetric(horizontal: 20), child: Image.asset(screens[index].img!)),
+                              child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 20),
+                                  child: Image.asset(screens[index].img!)),
                             ),
                           Expanded(flex: 1, child: Container()),
                           if (screens[index].title != null)
                             Text(
                               screens[index].title!,
                               textAlign: TextAlign.left,
-                              style: Config.h2(context).copyWith(fontWeight: FontWeight.w700, color: currentIndex == 0 ? AppColors.white100 : AppColors.textBlack, fontSize: 31.sp),
+                              style: Config.h2(context).copyWith(
+                                  fontWeight: FontWeight.w700,
+                                  color: currentIndex == 0
+                                      ? AppColors.white100
+                                      : AppColors.textBlack,
+                                  fontSize: 31.sp),
                             ),
                           12.0.sbH,
                           if (screens[index].text != null)
                             Text(
                               screens[index].text!,
                               textAlign: TextAlign.left,
-                              style: Config.b2(context).copyWith(fontSize: 16.sp, fontWeight: FontWeight.w400, color: currentIndex == 0 ? AppColors.white100 : AppColors.secondaryTextColor),
+                              style: Config.b2(context).copyWith(
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: currentIndex == 0
+                                      ? AppColors.white100
+                                      : AppColors.secondaryTextColor),
                             ),
                         ],
                       ),
@@ -137,14 +171,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ),
             22.sbH,
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: currentIndex == 0 ? 16.w : 32.w),
+              padding: EdgeInsets.symmetric(
+                  horizontal: currentIndex == 0 ? 16.w : 32.w),
               child: AppButton(
-                color: currentIndex == 0 ? AppColors.white100 : AppColors.textBlack,
-                textColor: currentIndex == 0 ? AppColors.textBlack : AppColors.white100,
+                color: currentIndex == 0
+                    ? AppColors.white100
+                    : AppColors.textBlack,
+                textColor: currentIndex == 0
+                    ? AppColors.textBlack
+                    : AppColors.white100,
                 text: currentIndex == 3 ? "Get Started" : "Next",
                 onTap: () {
                   if (currentIndex != screens.length - 1) {
-                    _pageController.animateToPage(currentIndex + 1, duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+                    _pageController.animateToPage(currentIndex + 1,
+                        duration: Duration(milliseconds: 400),
+                        curve: Curves.easeIn);
                   }
                 },
               ),
@@ -194,10 +235,13 @@ class ProgressIndicatorWidget extends StatelessWidget {
               (index) => AnimatedContainer(
                 duration: const Duration(milliseconds: 300),
                 margin: const EdgeInsets.symmetric(horizontal: 2.0),
-                width: MediaQuery.of(context).size.width / 4.9, // Adjusts width dynamically
+                width: MediaQuery.of(context).size.width /
+                    4.9, // Adjusts width dynamically
                 height: 5.0,
                 decoration: BoxDecoration(
-                  color: index <= currentIndex ? (currentIndex == 0 ? Colors.white : Colors.black) : Colors.grey.withOpacity(0.5),
+                  color: index <= currentIndex
+                      ? (currentIndex == 0 ? Colors.white : Colors.black)
+                      : Colors.grey.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
