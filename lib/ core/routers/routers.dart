@@ -8,20 +8,16 @@ class AppRouter {
     initialLocation: RouteConstants.initial,
     redirect: (context, state) async {
       return null;
-  
     },
     navigatorKey: _rootNavigatorKey,
     routes: [
-   
       GoRoute(
           path: '/',
           name: RouteConstants.letsGetToKnowYou,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: LetsGetToKnowYouScreen(
-               
-              ),
+              child: LetsGetToKnowYouScreen(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 // Change the opacity of the screen using a Curve based on the the animation's
@@ -34,16 +30,13 @@ class AppRouter {
               },
             );
           }),
-          
-           GoRoute(
+      GoRoute(
           path: '/',
           name: RouteConstants.forgotPassword,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: ForgotPasswordScreen(
-               
-              ),
+              child: ForgotPasswordScreen(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 // Change the opacity of the screen using a Curve based on the the animation's
@@ -56,7 +49,7 @@ class AppRouter {
               },
             );
           }),
-       ],
+    ],
   );
 
   static GoRouter get router => _router;
