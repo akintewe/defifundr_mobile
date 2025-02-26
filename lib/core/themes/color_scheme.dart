@@ -2,7 +2,6 @@
 
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 class AppColors {
   static const Color white100 = Color(0xFFFFFFFF);
@@ -27,6 +26,5 @@ class AppColors {
   static const Color transparent = Colors.transparent;
   static const Color textHintColor = Color(0xFFA6B7D4);
   static const Color purpleColor = Color(0xFF5A42DE);
-
-
+  static const Color textBlack = Color(0xFF121212);
 }
