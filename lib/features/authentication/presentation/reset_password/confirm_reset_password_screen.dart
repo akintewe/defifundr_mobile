@@ -54,7 +54,7 @@ class _ConfirmResetPasswordScreenState
                 ),
                 Image.asset(AppIcons.people),
                 AppButton(
-                    text: AppTexts.continueText,
+                    text: AppTexts.continuee,
                     color: AppColors.primaryColor,
                     textColor: AppColors.white100,
                     onTap: () {})

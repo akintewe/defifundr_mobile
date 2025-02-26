@@ -102,7 +102,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                     VerticalMargin(30),
                     AppButton(
-                        text: AppTexts.continueText,
+                        text: AppTexts.continuee,
                         color: AppColors.primaryColor,
                         textColor: AppColors.white100,
                         onTap: () {})

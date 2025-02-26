@@ -167,7 +167,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ),
               Spacer(),
               AppButton(
-                  text: AppTexts.continueText,
+                  text: AppTexts.continuee,
                   color: AppColors.primaryColor,
                   textColor: AppColors.white100,
                   onTap: () {})
