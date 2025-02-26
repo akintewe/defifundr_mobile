@@ -55,21 +55,34 @@ class _SelectNationalityScreen extends State<SelectNationalityScreen> {
             Row(
               children: [
                 selectedCountry != null
-                    ? Text(selectedCountry.flagEmoji, style: const TextStyle(fontSize: 20))
-                    : SvgPicture.asset('assets/icons/us-flag.svg', width: 24, height: 24),
-                const SizedBox(width: 4), // Spacing between flag and arrow
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.network(
+                          'https://flagcdn.com/w40/${selectedCountry.countryCode.toLowerCase()}.png',
+                          width: 24,
+                          height: 24,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    : ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: SvgPicture.asset('assets/icons/us-flag.svg', width: 24, height: 24),
+                      ),
+                const SizedBox(width: 8),
                 const Icon(Icons.arrow_drop_down, color: AppColors.grey500),
               ],
             ),
 
-            /// Country Name (or Placeholder)
             Expanded(
-              child: Text(
-                selectedCountry?.name ?? label,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: selectedCountry != null ? Colors.black : AppColors.grey300,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  selectedCountry?.name ?? label,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: selectedCountry != null ? Colors.black : AppColors.grey300,
+                  ),
                 ),
               ),
             ),
@@ -106,7 +119,6 @@ class _SelectNationalityScreen extends State<SelectNationalityScreen> {
             ),
             const SizedBox(height: 16),
 
-            /// Checkbox: Living in Country of Nationality
             CheckboxListTile(
               title: const Text(AppTexts.liveInCountryOfNationality, style: TextStyle(fontSize: 12, color: AppColors.secondaryTextColor)),
               value: _isLivingInCountryOfNationality,
@@ -121,7 +133,6 @@ class _SelectNationalityScreen extends State<SelectNationalityScreen> {
               visualDensity: const VisualDensity(horizontal: -4),
             ),
 
-            /// Country of Residency Dropdown (if different from nationality)
             if (!_isLivingInCountryOfNationality) ...[
               const SizedBox(height: 16),
               _buildDropdown(
@@ -136,7 +147,6 @@ class _SelectNationalityScreen extends State<SelectNationalityScreen> {
             ],
             const Spacer(),
 
-            /// Info & Continue Button
             const Text(AppTexts.collectCountryInfo, style: TextStyle(fontSize: 12, color: AppColors.secondaryTextColor)),
             const SizedBox(height: 16),
             SizedBox(
