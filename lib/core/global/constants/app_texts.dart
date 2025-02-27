@@ -1,20 +1,4 @@
 class AppTexts {
-  // ! let's get started
-  static String letsGetToKnowYouTitle = "Lets Get to know you";
-  static String letsGetToKnowYouSub =
-      "Securely access your account and manage payroll with ease.";
-  static String email = "Email";
-  static String istName = "Enter First Name";
-  static String lastName = "Enter Last Name";
-  static String gender = "Gender";
-  static String tacText = "By creating an account, you agree to our ";
-  static String tosText = "Terms of Service";
-  static String ppText = "Privacy Policy";
-  static String male = "Male";
-  static String female = "Female";
-  static String signUpSuccess = "Sign-up successful!";
-  static String continueButton = "Continue";
-
   //! AUTHENTICATION
   static String createAccount = "Create an account";
   static String createAccountDescription =
@@ -27,7 +11,6 @@ class AppTexts {
   static String firstName = "User Name";
   static String fillEmail = "Your email address";
   static String fillEmailLogin = "Your email address or username";
-  static String forgetPasswordLogin = "Your email address";
   static String emailInvalid = "Email is invalid";
   static String fieldEmpty(String field) => "$field can't be empty";
   static String alreadyHaveAccount = "Already have an account?";
@@ -59,11 +42,6 @@ class AppTexts {
   static String selectAvatarDesc = "Choose your avatar";
   static String usernameAlreadyTaken = "Username Already Exists";
   static String dashboard = "Get Started";
-  static String forgotPassword = "Forget Password";
-  static String neeHelp = "Need Help?";
-  static String forgotPasswordDesc =
-      "Ooops! don’t worry,\nthe process is simpler than you thought";
-  static String forgotPasswordButton = "Continue";
   static String resetPassword = "Reset Password";
   static String resetPasswordDesc =
       "Enter your email or username to reset password";
@@ -153,30 +131,6 @@ class AppTexts {
   static String getPrivateKey = "Get Private Key";
   static String setPasscode = "Set a 6-digit passcode for login";
   static String passcode = "Passcode";
-  static String createAPassword = "Create a Password";
-  static String addAPasswordToKeepAccountSafe =
-      "Add a password to keep your account safe and secure, make sure to add a strong and secure password";
-  static String needHelp = "Need Help?";
-  static String minOf8Char = "Minimum of 8 characters";
-  static String atLestOneUpperCase = "At least one uppercase letter (A-Z)";
-  static String atLestOneNumber = "At least one number (0-9)";
-  static String atLestOneSpecialChar =
-      "At least one special character (!@#\$%^&*)";
-  static String passwordMatch = "Password match";
-  static String enterPassword = "Enter password";
-  static String continuee = "Continue";
-  static String passwordReset = "Password Reset";
-  static String forgetPassword = "Forget Password";
-  static String passwordResetSuccessfully =
-      "Password has been reset successfully, You can proceed to login with your new Password.";
-  static String verifyOtp = "Verify OTP";
-  static String resendCode = "Resend code 60secs";
-  static String enterOtpCode =
-      "Enter the OTP code sent to the email ending with";
-  static String oppsDontWorry = "Ooops! don’t worry,";
-  static String theProcessIsSimpler = "the process is simpler than you thought";
-  static String confirmOtp = "Confirm OTP";
-
 
   //! Select Nationality
   static const String selectNationalityTitle = 'Select Nationality';
@@ -186,5 +140,5 @@ class AppTexts {
   static const String liveInCountryOfNationality = 'I live in my country of nationality';
   static const String selectCountryOfResidencyLabel = 'Select country of residency';
   static const String collectCountryInfo = 'We collect your country to tailor your experience based on where you currently reside.';
-
+  static const String continueButton = 'Continue';
 }
