@@ -1,3 +1,4 @@
+import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -37,7 +38,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'Incomplete Registration',
+                    AppTexts.incompleteRegistration,
                     style: Config.h2(context).copyWith(fontSize: 26),
                   ),
                 ),
@@ -48,7 +49,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 84),
                     child: Text(
                       textAlign: TextAlign.center,
-                      'We Notified that your profile was not completed when you first created your account',
+                      AppTexts.weNotifiedthatyourprofilewasnot,
                       style: Config.h2(context).copyWith(fontSize: 12),
                     ),
                   ),
@@ -59,7 +60,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: AppButton(
-                    text: "Proceed",
+                    text: AppTexts.proceed,
                     textColor: AppColors.white100,
                     color: AppColors.primaryColor,
                     onTap: () {},
@@ -68,7 +69,8 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'No, thank you',
+                    AppTexts.nothankyou,
+                   
                     style: Config.h2(context).copyWith(fontSize: 16),
                   ),
                 ),
