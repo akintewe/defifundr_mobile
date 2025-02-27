@@ -2,9 +2,9 @@ import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/color_scheme.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
-import 'package:defifundr_mobile/%20core/shared/appbar/appbar.dart';
-import 'package:defifundr_mobile/%20core/shared/button/buttons.dart';
-import 'package:defifundr_mobile/%20core/shared/textfield/textfield.dart';
+import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
+import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
+import 'package:defifundr_mobile/core/shared/textfield/app_text_field.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/states/lets_get_to_know_you/lets_get_to_know_you_bloc.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -100,33 +100,29 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                     SizedBox(height: 30.h),
                     AppTextField(
                       controller: _emailController,
-                      hintText: AppTexts.email,
-                      inputType: TextInputType.emailAddress,
+                      label: AppTexts.email,
+                      // inputType: TextInputType.emailAddress,
                       prefixIcon: SvgPicture.asset(AppAssets.userIcon,
                           fit: BoxFit.scaleDown),
-                      fillColor: AppColors.white,
                     ),
                     SizedBox(height: 15.h),
                     AppTextField(
                       controller: _firstNameController,
-                      hintText: AppTexts.istName,
+                      label: AppTexts.istName,
                       prefixIcon: SvgPicture.asset(AppAssets.userIcon,
                           fit: BoxFit.scaleDown),
-                      fillColor: AppColors.white,
                     ),
                     SizedBox(height: 15.h),
                     AppTextField(
                       controller: _lastNameController,
-                      hintText: AppTexts.lastName,
+                      label: AppTexts.lastName,
                       prefixIcon: SvgPicture.asset(AppAssets.userIcon,
                           fit: BoxFit.scaleDown),
-                      fillColor: AppColors.white,
                     ),
                     SizedBox(height: 15.h),
                     AppTextField(
                       controller: _selectedGender,
-                      hintText: AppTexts.gender,
-                      fillColor: AppColors.white,
+                      label: AppTexts.gender,
                     ),
                     SizedBox(height: 20.h),
                     Row(
