@@ -23,4 +23,12 @@ class AppAssets {
   static const onBoardingLogo = '$defifundrImagePath/logo.svg';
   static const onBoardingLogoWhite = '$defifundrImagePath/logo-white.svg';
   static const arrowRight = '$defifundrImagePath/arrow-right.svg';
+  static const background = '$defifundrImagePath/background.png';
+  static const logo = '$defifundrImagePath/logo.png';
+  static const rocket = '$defifundrImagePath/rocket.png';
+  static const backgroundnewImagePath = '$defifundrImagePath/backgroundnew.png';
+  static const incompleteRegistrationImagePath =
+      '$defifundrIconPath/incompletRegistration.svg';
+  static const closeIcon = '$defifundrIconPath/close.svg';
+  static const groupIcon = '$defifundrIconPath/group.svg';
 }
