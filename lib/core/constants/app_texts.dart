@@ -188,6 +188,12 @@ class AppTexts {
   static String personalaccount = 'Personal account';
   static String empoweryourbusinessbyusingDefiFundrtopower =
       'empower your business by using DefiFundr to power your business and transform your payroll';
+  static String whattypeofpersonalaccount = "What type of personal account?";
+  static String nothankyou = 'No, thank you';
+  static String contractor = 'Contractor';
+  static String freelancer = 'Freelancer';
+  static String tellusaboutthetypeofpersonal =
+      'Tell us about the type of personal account you are trying to open ';
 
   //! Select Nationality
   static const String selectNationalityTitle = 'Select Nationality';
@@ -201,8 +207,6 @@ class AppTexts {
       'Select country of residency';
   static const String collectCountryInfo =
       'We collect your country to tailor your experience based on where you currently reside.';
-
-  static String nothankyou = 'No, thank you';
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
 }
