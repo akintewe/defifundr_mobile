@@ -15,7 +15,7 @@ class AppRouter {
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-              child: const ResetPasswordSuccess(),
+              child: const TypeOfAccount(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 // Change the opacity of the screen using a Curve based on the the animation's
