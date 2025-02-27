@@ -75,16 +75,11 @@ class _ContractDetailScreenState extends State<ContractDetailScreen> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
       decoration: BoxDecoration(
-          color: AppColors.white100,
-          borderRadius: BorderRadius.circular(
-            15,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.white,
-              blurRadius: 1,
-            )
-          ]),
+        color: AppColors.white100,
+        borderRadius: BorderRadius.circular(
+          15,
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
