@@ -1,6 +1,9 @@
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
+import 'package:defifundr_mobile/features/authentication/presentation/reset_password/verify_otp_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pinput/pinput.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -10,6 +13,13 @@ class VerifyOtpScreen extends StatefulWidget {
 }
 
 class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
+  // final GlobalKey<FormState> _formKey = GlobalKey();
+  // final FocusNode _otpNode = FocusNode();
+  // late final CountdownController _controller;
+  final ValueNotifier<String> otp = ValueNotifier<String>("");
+  final TextEditingController _otpController = TextEditingController();
+
+  bool isCodeResent = false;
   final TextEditingController _pinController = TextEditingController();
   final int _pinLength = 6;
   String _pin = '';
@@ -18,75 +28,6 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   void dispose() {
     _pinController.dispose();
     super.dispose();
-  }
-
-  void _onNumberPressed(String number) {
-    if (_pin.length < _pinLength) {
-      setState(() {
-        _pin += number;
-      });
-    }
-  }
-
-  void _onBackspace() {
-    if (_pin.isNotEmpty) {
-      setState(() {
-        _pin = _pin.substring(0, _pin.length - 1);
-      });
-    }
-  }
-
-  Widget _buildPinDot(bool isActive) {
-    return Container(
-      width: 48,
-      height: 48,
-      margin: const EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: isActive ? const Color(0xFFA6B7D4) : const Color(0xFFA6B7D4),
-          width: 2,
-        ),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: isActive
-          ? Center(
-              child: Container(
-                width: 8,
-                height: 8,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFA6B7D4),
-                  shape: BoxShape.circle,
-                ),
-              ),
-            )
-          : null,
-    );
-  }
-
-  Widget _buildNumberButton(String number) {
-    return Container(
-      width: 72,
-      height: 72,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: const Color(0xFF666666).withOpacity(0.05),
-      ),
-      child: TextButton(
-        onPressed: () => _onNumberPressed(number),
-        style: TextButton.styleFrom(
-          shape: const CircleBorder(),
-          padding: EdgeInsets.zero,
-        ),
-        child: Text(
-          number,
-          style: const TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-            color: Color(0xFF1A1A1A),
-          ),
-        ),
-      ),
-    );
   }
 
   @override
@@ -176,11 +117,27 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                   ),
                 ),
                 const SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                    _pinLength,
-                    (index) => _buildPinDot(index < _pin.length),
+                Align(
+                  alignment: Alignment.center,
+                  child: Pinput(
+                    defaultPinTheme: defaultPinTheme,
+                    focusedPinTheme: defaultPinTheme.copyDecorationWith(
+                      border: Border.all(color: AppColors.primaryColor),
+                    ),
+                    length: 6,
+                    pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+                    hapticFeedbackType: HapticFeedbackType.vibrate,
+                    keyboardType: TextInputType.number,
+                    controller: _otpController,
+                    pinAnimationType: PinAnimationType.fade,
+                    onChanged: (newOtp) {
+                      setState(() {
+                        otp.value = newOtp;
+                      });
+                    },
+                    errorPinTheme: defaultPinTheme.copyBorderWith(
+                      border: Border.all(color: Colors.redAccent),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 70),
