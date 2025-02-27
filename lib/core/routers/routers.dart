@@ -15,11 +15,13 @@ class AppRouter {
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
+<<<<<<< Updated upstream
               child: const PersonalAccountType(),
+=======
+              child: const ContractOverview(),
+>>>>>>> Stashed changes
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
-                // Change the opacity of the screen using a Curve based on the the animation's
-                // value
                 return FadeTransition(
                   opacity: CurveTween(curve: Curves.easeInOutCirc)
                       .animate(animation),
@@ -38,8 +40,6 @@ class AppRouter {
               child: const CreatePasswordScreen(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
-                // Change the opacity of the screen using a Curve based on the the animation's
-                // value
                 return FadeTransition(
                   opacity: CurveTween(curve: Curves.easeInOutCirc)
                       .animate(animation),
