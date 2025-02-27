@@ -187,4 +187,7 @@ class AppTexts {
   static const String selectCountryOfResidencyLabel = 'Select country of residency';
   static const String collectCountryInfo = 'We collect your country to tailor your experience based on where you currently reside.';
 
+  static String nothankyou = 'No, thank you';
+  static String weNotifiedthatyourprofilewasnot =
+      "We Notified that your profile was not completed when you first created your account'";
 }
