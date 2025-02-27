@@ -209,13 +209,6 @@ class AppTexts {
   static const String collectCountryInfo =
       'We collect your country to tailor your experience based on where you currently reside.';
 
-  static String nothankyou = 'No, thank you';
-  static const String liveInCountryOfNationality =
-      'I live in my country of nationality';
-  static const String selectCountryOfResidencyLabel =
-      'Select country of residency';
-  static const String collectCountryInfo =
-      'We collect your country to tailor your experience based on where you currently reside.';
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
   static String createContractDetails = "Create Contract Details";
