@@ -228,4 +228,7 @@ class AppTexts {
       "empower your business by using DefiFundr to power your business and transform your payroll";
   static String kindlyCreateContract =
       "Please kindly create a contract agreement details you’d like to share with your employer";
+  static const String contractorsTaxResidence = "Contractor's tax residence*";
+  static const String contractName = "Contract name";
+  static const String searchCountry = "Search Country";
 }
