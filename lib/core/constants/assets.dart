@@ -31,4 +31,5 @@ class AppAssets {
       '$defifundrIconPath/incompletRegistration.svg';
   static const closeIcon = '$defifundrIconPath/close.svg';
   static const groupIcon = '$defifundrIconPath/group.svg';
+  static const groupIcon = '$defifundrImagePath/group.svg';
 }
