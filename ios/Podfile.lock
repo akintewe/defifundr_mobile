@@ -2,8 +2,10 @@ PODS:
   - Flutter (1.0.0)
   - flutter_native_splash (2.4.3):
     - Flutter
+
   - fluttertoast (0.0.2):
     - Flutter
+
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
