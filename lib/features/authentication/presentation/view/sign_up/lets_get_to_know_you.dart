@@ -1,10 +1,10 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
-import 'package:defifundr_mobile/core/constants/color_scheme.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/shared/textfield/app_text_field.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/states/lets_get_to_know_you/lets_get_to_know_you_bloc.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +52,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white250,
+      backgroundColor: AppColors.primaryBackgroundColor,
       appBar: PreferredSize(
           preferredSize: Size(context.screenWidth(), 60),
           child: DeFiRaiseAppBar(
@@ -145,7 +145,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                             text: TextSpan(
                               style: TextStyle(
                                   fontSize: 12.sp,
-                                  color: AppColors.subtextGreyColor),
+                                  color: AppColors.grey200),
                               children: [
                                 TextSpan(text: AppTexts.tacText),
                                 TextSpan(
