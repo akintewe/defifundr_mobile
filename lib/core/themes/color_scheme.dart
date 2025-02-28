@@ -32,4 +32,6 @@ class AppColors {
   static const Color purpleLight = Color(0xFFF3F0FF);
   static const Color purpleText = Color(0xFF220959);
   static const Color purpleTextLight = Color(0xFF220959);
+  static const Color subHeadingBlack = Color(0xFF17191C);
+  static const Color subTitleGray = Color(0xFF3C4049);
 }

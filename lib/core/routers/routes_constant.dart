@@ -31,4 +31,9 @@ class RouteConstants {
   static String selectNationality = 'selectNationality';
   static String verifyBVN = 'verifyBVN';
   static String createPassword = 'createPassword';
+  static const String letsGetToKnowYou = 'letsGetToKnowYou';
+ 
+
+  static const String forgotPassword = 'forgotPassword';
+  static const String verifyOtp = 'verifyOtp';
 }
