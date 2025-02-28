@@ -49,4 +49,5 @@ class AppAssets {
   static const profile = '$defifundrImagePath/profile.png';
   static const dollarCircle = '$defifundrImagePath/dollarCircle.svg';
   static const transaction = '$defifundrImagePath/transaction.svg';
+  static const sss = '$defifundrImagePath/sss.svg';
 }
