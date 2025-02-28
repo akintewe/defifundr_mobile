@@ -77,6 +77,23 @@ class AppRouter {
           );
         },
       ),
+      GoRoute(
+        path: '/select-id-type',
+        name: RouteConstants.selectIdType,
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: const SelectIdTypeScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeInOutCirc)
+                    .animate(animation),
+                child: child,
+              );
+            },
+          );
+        },
+      )
     ],
   );
 

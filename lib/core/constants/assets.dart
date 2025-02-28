@@ -15,6 +15,7 @@ class AppAssets {
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
   static String ninSlipImage = '${defifundrIconPath}/nin_slip.png';
+  static String arrowRightCurve = '${defifundrIconPath}arrow_right.svg';
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
