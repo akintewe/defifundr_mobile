@@ -31,4 +31,13 @@ class AppAssets {
       '$defifundrIconPath/incompletRegistration.svg';
   static const closeIcon = '$defifundrIconPath/close.svg';
   static const groupIcon = '$defifundrIconPath/group.svg';
+  static const eclipse = '$defifundrImagePath/eclipse.svg';
+  static const tether = '$defifundrImagePath/tether.svg';
+  static const cloud = '$defifundrImagePath/cloud.png';
+
+  static const home = '$defifundrImagePath/home.svg';
+  static const noTransaction = '$defifundrImagePath/noTransaction.svg';
+  static const profile = '$defifundrImagePath/profile.png';
+  static const dollarCircle = '$defifundrImagePath/dollarCircle.svg';
+  static const transaction = '$defifundrImagePath/transaction.svg';
 }
