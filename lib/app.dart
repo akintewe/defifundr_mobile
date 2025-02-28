@@ -1,4 +1,4 @@
-import 'package:defifundr_mobile/signin.dart';
+import 'package:defifundr_mobile/screens/signin.dart';
 import 'package:defifundr_mobile/bloc_provider.dart';
 import 'package:flutter/material.dart'
     show

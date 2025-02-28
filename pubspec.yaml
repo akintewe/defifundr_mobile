@@ -42,9 +42,7 @@ dependencies:
 
   flutter_native_splash:
     ^2.2.16
-  flutter_svg: ^2.0.17
   get_it: ^8.0.3
-  google_fonts: ^6.2.1
   pinput: ^5.0.1
   country_picker: ^2.0.27
   country_list_pick: ^1.0.1+6
