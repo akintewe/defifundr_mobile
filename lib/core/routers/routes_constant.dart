@@ -4,4 +4,5 @@ class RouteConstants {
   static const String createPassword = 'createPassword';
   static const String onboarding = 'onboarding';
   static const String forgotPassword = 'forgotPassword';
+  static const String verifyOtp = 'verifyOtp';
 }
