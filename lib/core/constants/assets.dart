@@ -15,7 +15,10 @@ class AppAssets {
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
   static String ninSlipImage = '${defifundrIconPath}/nin_slip.png';
+  static String person = '${defifundrIconPath}person.svg';
+  static String crossEye = '${defifundrIconPath}cross_eye.svg';
   static String arrowRightCurve = '${defifundrIconPath}arrow_right.svg';
+
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
@@ -35,5 +38,6 @@ class AppAssets {
   static const incompleteRegistrationImagePath =
       '$defifundrIconPath/incompletRegistration.svg';
   static const closeIcon = '$defifundrIconPath/close.svg';
+  static const lockIcon = '$defifundrIconPath/lock_icon.svg';
   static const groupIcon = '$defifundrIconPath/group.svg';
 }
