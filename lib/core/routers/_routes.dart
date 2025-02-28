@@ -5,6 +5,7 @@ import 'package:defifundr_mobile/features/authentication/presentation/incomplete
 import 'package:defifundr_mobile/features/authentication/presentation/reset_password/reset_password_success.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/type_of_account/type_of_account.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/type_of_account/personal_account_type.dart';
+import 'package:defifundr_mobile/features/contract/scope_of_work/view/scope_of_work_screen.dart';
 import 'package:defifundr_mobile/features/onboarding/onboarding-screen.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/forgot_password/view/forgot_password_screen.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/signup/view/select_nationality_screen.dart';
