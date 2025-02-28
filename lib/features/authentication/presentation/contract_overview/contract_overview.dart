@@ -92,7 +92,7 @@ class _ContractPaymentDetailssState extends State<ContractPaymentDetails> {
       width: 333,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.white,
+        color: AppColors.white100,
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -149,7 +149,7 @@ class ContractRoleDetails extends StatelessWidget {
       width: 333,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.white,
+        color: AppColors.white100,
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -176,7 +176,7 @@ class ContractRoleDetails extends StatelessWidget {
               width: 333,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: AppColors.white,
+                color: AppColors.white100,
               ),
               child: Container(
                 decoration: BoxDecoration(
@@ -241,12 +241,31 @@ class ContractComplainceDocument extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              AppTexts.compliance,
+              AppTexts.complianceDocument,
               style: Config.h2(context).copyWith(fontSize: 14),
             ),
-            SizedBox(height: 10),
             Row(
-              children: [],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  AppTexts.machinelearningcomplincePDF,
+                  style: Config.h2(context).copyWith(fontSize: 10),
+                ),
+                Container(
+                  height: 19,
+                  width: 48,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: AppColors.black100,
+                  ),
+                  child: Center(
+                    child: Text(
+                      AppTexts.view,
+                      style: Config.h2(context).copyWith(fontSize: 9, color: AppColors.white100),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -314,7 +333,7 @@ class ContractBasicDetails extends StatelessWidget {
       width: 333,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.white,
+        color: AppColors.white100,
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

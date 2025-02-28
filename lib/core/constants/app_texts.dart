@@ -238,6 +238,7 @@ class AppTexts {
   static String ninSlip = "NIN Slip";
   static String votersCard = "Voters Card";
   static String bvn = "BVN";
+    static String machinelearningcomplincePDF = "Machine_learning_complince.PDF";
   static String driversLicense = "Drivers License";
   static String internationalPassport = "International Passport";
   static String yourInfoIsSafe = "Your information is safe";
