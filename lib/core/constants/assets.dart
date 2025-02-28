@@ -16,6 +16,8 @@ class AppAssets {
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
   static String person = '${defifundrIconPath}person.svg';
   static String crossEye = '${defifundrIconPath}cross_eye.svg';
+  static String arrowRightCurve = '${defifundrIconPath}arrow_right.svg';
+
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
