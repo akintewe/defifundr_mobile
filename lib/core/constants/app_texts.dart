@@ -222,6 +222,14 @@ class AppTexts {
   static String bvnSecurityDesc = "Your data is encrypted and never shared with third parties. This step helps ensure a secure and compliant experience for all users.";
   static String getBVNInstruction = "Dial *565*0# on your registered number to get your BVN";
 
+  //! NIN Verification
+  static String verifyWithNIN = "Verify with NIN";
+  static String verifyWithNINDesc = "Enter the NIN number on your slip in the field below.";
+  static String enterNIN = "Enter NIN";
+  static String ninSafeAndSecure = "Your NIN is Safe & Secure";
+  static String ninDigits = "11 digits";
+  static String ninIdentityDesc = "We only use your NIN to verify your identity—nothing more.";
+  static String ninSecurityDesc = "Your data is encrypted and never shared with third parties. This step helps ensure a secure and compliant experience for all users.";
 
   // scope of work sring
   static String scopeOfWork = "Scope of work templates";
@@ -240,7 +248,7 @@ class AppTexts {
   static String empowerYourBusiness =
       "empower your business by using DefiFundr to power your business and transform your payroll";
   static String kindlyCreateContract =
-      "Please kindly create a contract agreement details you’d like to share with your employer";
+      "Please kindly create a contract agreement details you'd like to share with your employer";
   static const String contractorsTaxResidence = "Contractor's tax residence*";
   static const String contractName = "Contract name";
   static const String searchCountry = "Search Country";

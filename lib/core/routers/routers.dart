@@ -6,7 +6,7 @@ class AppRouter {
 
   static final GoRouter _router = GoRouter(
     debugLogDiagnostics: true,
-    initialLocation: '/verify-bvn',
+    initialLocation: '/verify-nin',
     navigatorKey: _rootNavigatorKey,
     routes: [
       GoRoute(
@@ -16,6 +16,23 @@ class AppRouter {
           return CustomTransitionPage(
             key: state.pageKey,
             child: const VerifyBVNScreen(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeInOutCirc)
+                    .animate(animation),
+                child: child,
+              );
+            },
+          );
+        },
+      ),
+      GoRoute(
+        path: '/verify-nin',
+        name: RouteConstants.verifyNIN,
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: const VerifyNINScreen(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: CurveTween(curve: Curves.easeInOutCirc)
