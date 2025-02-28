@@ -62,7 +62,7 @@ class AppTexts {
   static String forgotPassword = "Forget Password";
   static String neeHelp = "Need Help?";
   static String forgotPasswordDesc =
-      "Ooops! don’t worry,\nthe process is simpler than you thought";
+      "Ooops! don't worry,\nthe process is simpler than you thought";
   static String forgotPasswordButton = "Continue";
   static String resetPassword = "Reset Password";
   static String resetPasswordDesc =
@@ -175,7 +175,7 @@ class AppTexts {
       'Password has been reset successfully, You can proceed to login with your new Password.';
   static String enterOtpCode =
       "Enter the OTP code sent to the email ending with";
-  static String oppsDontWorry = "Ooops! don’t worry,";
+  static String oppsDontWorry = "Ooops! don't worry,";
   static String theProcessIsSimpler = "the process is simpler than you thought";
   static String confirmOtp = "Confirm OTP";
 
@@ -212,6 +212,15 @@ class AppTexts {
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
 
+  //! BVN Verification
+  static String verifyWithBVN = "Verify with your BVN";
+  static String verifyWithBVNDesc = "Verify your account using your Bank Verification Number";
+  static String enterBVN = "Enter BVN";
+  static String bvnSafeAndSecure = "Your BVN is Safe & Secure";
+  static String bvnDigits = "11 digits";
+  static String bvnIdentityDesc = "We only use your BVN to verify your identity—nothing more.";
+  static String bvnSecurityDesc = "Your data is encrypted and never shared with third parties. This step helps ensure a secure and compliant experience for all users.";
+  static String getBVNInstruction = "Dial *565*0# on your registered number to get your BVN";
 
 
   // scope of work sring

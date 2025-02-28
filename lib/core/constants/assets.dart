@@ -13,6 +13,7 @@ class AppAssets {
   static String upArrow = '${defifundrIconPath}arrow_up.svg';
   static String downArrow = '${defifundrIconPath}arrow_down.svg';
   static String backgroundImage = '${defifundrIconPath}background.png';
+  static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
