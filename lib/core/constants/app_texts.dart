@@ -90,6 +90,8 @@ class AppTexts {
       "Your private key is a 64 character special kind of password. It is one way to access your account. Never share it with anyone!";
   static String yourRecoveryOrSeedPhrase =
       "Your recovery or seed phrase is a 12 word special kind of password. it is another way to access your account and it must be kept private!";
+    
+     static String passWordForgot = 'Forgot Password?';    
 
   //! DASHBOARD
   static String searchCampaign = "Search Campaign";

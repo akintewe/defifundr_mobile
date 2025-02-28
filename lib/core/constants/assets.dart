@@ -14,6 +14,8 @@ class AppAssets {
   static String downArrow = '${defifundrIconPath}arrow_down.svg';
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
+  static String person = '${defifundrIconPath}person.svg';
+  static String crossEye = '${defifundrIconPath}cross_eye.svg';
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
@@ -33,5 +35,6 @@ class AppAssets {
   static const incompleteRegistrationImagePath =
       '$defifundrIconPath/incompletRegistration.svg';
   static const closeIcon = '$defifundrIconPath/close.svg';
+  static const lockIcon = '$defifundrIconPath/lock_icon.svg';
   static const groupIcon = '$defifundrIconPath/group.svg';
 }
