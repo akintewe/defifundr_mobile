@@ -223,6 +223,18 @@ class AppTexts {
   static String getBVNInstruction = "Dial *565*0# on your registered number to get your BVN";
 
 
+  //Select ID
+  static String selectYourIdType = "Select your ID Type";
+  static String wellUseThisInfoToVerify = "We’ll use this information to verify your identity";
+  static String ninSlip = "NIN Slip";
+  static String votersCard = "Voters Card";
+  static String bvn = "BVN";
+  static String driversLicense = "Drivers License";
+  static String internationalPassport = "International Passport";
+  static String yourInfoIsSafe = "Your information is safe";
+  static String weOnlyCollectTheNecessaryDetails = "We only collect the necessary details to confirm your identity—just your name and date of birth. Your information is encrypted and never shared with third parties.";
+
+
   // scope of work sring
   static String scopeOfWork = "Scope of work templates";
   static String createFixedRateContract =

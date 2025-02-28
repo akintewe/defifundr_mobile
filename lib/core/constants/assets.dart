@@ -14,6 +14,7 @@ class AppAssets {
   static String downArrow = '${defifundrIconPath}arrow_down.svg';
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
+  static String arrowRightCurve = '${defifundrIconPath}arrow_right.svg';
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
