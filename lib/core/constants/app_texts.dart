@@ -209,4 +209,13 @@ class AppTexts {
       'We collect your country to tailor your experience based on where you currently reside.';
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
+
+
+  // scope of work sring
+  static String scopeOfWork = "Scope of work templates";
+  static String createFixedRateContract =
+      "Create a Fixed Rate contract for individual contractors for your company";
+  static String viewAll  = "View All";
+  static String select  = "Select";
+  
 }

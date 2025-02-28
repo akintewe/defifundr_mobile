@@ -4,12 +4,14 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  static const Color backgroundWhite = Color(0xFFFAFAFA);
   static const Color white100 = Color(0xFFFFFFFF);
   static const Color white200 = Color(0xFFF9F9F9);
   static const Color primaryColor = Color(0xFF000000);
   static const Color primaryBackgroundColor = Color(0xFFFAFAFA);
   static const Color secondaryColor = Color(0xFF2B64E3);
   static const Color secondaryTextColor = Color(0xFF626F84);
+  static const Color subtitleGrey = Color(0xFF505780);
   static const Color grey100 = Color(0xFF5C5C5C);
   static const Color grey200 = Color(0xFFE7E7E7);
   static const Color grey300 = Color(0xFFAAAAAA);
@@ -19,6 +21,7 @@ class AppColors {
   static const Color errorColor = Color(0xFFE02020);
   static const Color successColor = Color(0xFF00C853);
   static const Color black100 = Color(0xFF000000);
+  static const Color titleBlack = Color(0xFF16192C);
   static const Color black200 = Color(0xFF222222);
   static const Color tooastErrorColor = Color(0xFFFF5353);
   static const Color borderColor = Color(0xFFE2E8F0);
