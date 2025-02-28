@@ -1,9 +1,11 @@
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/select_id_type/widget/id_type_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/app_texts.dart';
 
@@ -25,7 +27,7 @@ class _SelectIdTypeScreenState extends State<SelectIdTypeScreen> {
             backgroundColor: Colors.transparent,
             elevation: 0,
               leading: IconButton(
-                icon: Icon(CupertinoIcons.back, color: Colors.black),
+                icon: SvgPicture.asset(AppAssets.backArrow, color: Colors.black),
                 onPressed: () => Navigator.pop(context),
               )
           ),
