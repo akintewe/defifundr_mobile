@@ -221,6 +221,16 @@ class AppTexts {
   static String bvnIdentityDesc = "We only use your BVN to verify your identity—nothing more.";
   static String bvnSecurityDesc = "Your data is encrypted and never shared with third parties. This step helps ensure a secure and compliant experience for all users.";
   static String getBVNInstruction = "Dial *565*0# on your registered number to get your BVN";
+
+
+  // scope of work sring
+  static String scopeOfWork = "Scope of work templates";
+  static String createFixedRateContract =
+      "Create a Fixed Rate contract for individual contractors for your company";
+  static String viewAll  = "View All";
+  static String select  = "Select";
+  
+
   static String createContractDetails = "Create Contract Details";
   static String fixedRate = "Fixed rate";
   static String payAsYouGo = "Pay as you go";
@@ -234,4 +244,5 @@ class AppTexts {
   static const String contractorsTaxResidence = "Contractor's tax residence*";
   static const String contractName = "Contract name";
   static const String searchCountry = "Search Country";
+
 }

@@ -10,6 +10,8 @@ class AppAssets {
   static String back = '${defifundrIconPath}back.svg';
   static String appIcon = '${defifundrIconPath}appIcon.svg';
   static String backArrow = '${defifundrIconPath}arrow_back.svg';
+  static String upArrow = '${defifundrIconPath}arrow_up.svg';
+  static String downArrow = '${defifundrIconPath}arrow_down.svg';
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
 
