@@ -178,6 +178,7 @@ class AppTexts {
   static String oppsDontWorry = "Ooops! don’t worry,";
   static String theProcessIsSimpler = "the process is simpler than you thought";
   static String confirmOtp = "Confirm OTP";
+
   static String businessaccount = 'Business account';
   static String tellusmoreabouttheaccounttypetypeyouare =
       'Tell us more about the account type type you are trying to open and keep us informed';
@@ -207,6 +208,20 @@ class AppTexts {
       'Select country of residency';
   static const String collectCountryInfo =
       'We collect your country to tailor your experience based on where you currently reside.';
+
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
+  static String createContractDetails = "Create Contract Details";
+  static String fixedRate = "Fixed rate";
+  static String payAsYouGo = "Pay as you go";
+  static String milestone = "Milestone";
+  static String createAPersonalizedAccount =
+      "create a personalized account to empower your self and get paid from any where in the world";
+  static String empowerYourBusiness =
+      "empower your business by using DefiFundr to power your business and transform your payroll";
+  static String kindlyCreateContract =
+      "Please kindly create a contract agreement details you’d like to share with your employer";
+  static const String contractorsTaxResidence = "Contractor's tax residence*";
+  static const String contractName = "Contract name";
+  static const String searchCountry = "Search Country";
 }
