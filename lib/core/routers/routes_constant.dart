@@ -30,6 +30,7 @@ class RouteConstants {
   static String pasteYourRecoveryPhrase = 'pasteYourRecoveryPhrase';
   static String selectNationality = 'selectNationality';
   static String verifyBVN = 'verifyBVN';
+  static String verifyNIN = 'verifyNIN';
   static String createPassword = 'createPassword';
   static const String letsGetToKnowYou = 'letsGetToKnowYou';
   static String selectIdType = 'selectIdType';
