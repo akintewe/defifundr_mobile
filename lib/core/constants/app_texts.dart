@@ -62,7 +62,7 @@ class AppTexts {
   static String forgotPassword = "Forget Password";
   static String neeHelp = "Need Help?";
   static String forgotPasswordDesc =
-      "Ooops! don’t worry,\nthe process is simpler than you thought";
+      "Ooops! don't worry,\nthe process is simpler than you thought";
   static String forgotPasswordButton = "Continue";
   static String resetPassword = "Reset Password";
   static String resetPasswordDesc =
@@ -180,9 +180,10 @@ class AppTexts {
       'Password has been reset successfully, You can proceed to login with your new Password.';
   static String enterOtpCode =
       "Enter the OTP code sent to the email ending with";
-  static String oppsDontWorry = "Ooops! don’t worry,";
+  static String oppsDontWorry = "Ooops! don't worry,";
   static String theProcessIsSimpler = "the process is simpler than you thought";
   static String confirmOtp = "Confirm OTP";
+
   static String businessaccount = 'Business account';
   static String tellusmoreabouttheaccounttypetypeyouare =
       'Tell us more about the account type type you are trying to open and keep us informed';
@@ -216,6 +217,53 @@ class AppTexts {
       'Select country of residency';
   static const String collectCountryInfo =
       'We collect your country to tailor your experience based on where you currently reside.';
+
   static String weNotifiedthatyourprofilewasnot =
       "We Notified that your profile was not completed when you first created your account'";
+
+  //! BVN Verification
+  static String verifyWithBVN = "Verify with your BVN";
+  static String verifyWithBVNDesc = "Verify your account using your Bank Verification Number";
+  static String enterBVN = "Enter BVN";
+  static String bvnSafeAndSecure = "Your BVN is Safe & Secure";
+  static String bvnDigits = "11 digits";
+  static String bvnIdentityDesc = "We only use your BVN to verify your identity—nothing more.";
+  static String bvnSecurityDesc = "Your data is encrypted and never shared with third parties. This step helps ensure a secure and compliant experience for all users.";
+  static String getBVNInstruction = "Dial *565*0# on your registered number to get your BVN";
+
+
+  //Select ID
+  static String selectYourIdType = "Select your ID Type";
+  static String wellUseThisInfoToVerify = "We’ll use this information to verify your identity";
+  static String ninSlip = "NIN Slip";
+  static String votersCard = "Voters Card";
+  static String bvn = "BVN";
+  static String driversLicense = "Drivers License";
+  static String internationalPassport = "International Passport";
+  static String yourInfoIsSafe = "Your information is safe";
+  static String weOnlyCollectTheNecessaryDetails = "We only collect the necessary details to confirm your identity—just your name and date of birth. Your information is encrypted and never shared with third parties.";
+
+
+  // scope of work sring
+  static String scopeOfWork = "Scope of work templates";
+  static String createFixedRateContract =
+      "Create a Fixed Rate contract for individual contractors for your company";
+  static String viewAll  = "View All";
+  static String select  = "Select";
+  
+
+  static String createContractDetails = "Create Contract Details";
+  static String fixedRate = "Fixed rate";
+  static String payAsYouGo = "Pay as you go";
+  static String milestone = "Milestone";
+  static String createAPersonalizedAccount =
+      "create a personalized account to empower your self and get paid from any where in the world";
+  static String empowerYourBusiness =
+      "empower your business by using DefiFundr to power your business and transform your payroll";
+  static String kindlyCreateContract =
+      "Please kindly create a contract agreement details you’d like to share with your employer";
+  static const String contractorsTaxResidence = "Contractor's tax residence*";
+  static const String contractName = "Contract name";
+  static const String searchCountry = "Search Country";
+
 }
