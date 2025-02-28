@@ -4,6 +4,7 @@ import 'package:defifundr_mobile/core/shared/textfield/app_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../core/constants/app_icons.dart';
 import '../../core/constants/app_texts.dart';
 import '../../core/shared/appbar/appbar.dart';
@@ -35,7 +36,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
   final FocusNode _confirmPasswordNode = FocusNode();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
-  TextEditingController();
+      TextEditingController();
 
   @override
   void initState() {
@@ -49,7 +50,8 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
     setState(() {
       passwordMatch.value =
           _passwordController.text == _confirmPasswordController.text &&
-      _passwordController.text.isNotEmpty && _confirmPasswordController.text.isNotEmpty;
+              _passwordController.text.isNotEmpty &&
+              _confirmPasswordController.text.isNotEmpty;
       enabled.value = capital.value &&
           number.value &&
           special.value &&
@@ -82,143 +84,144 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PreferredSize(
-             preferredSize: Size(context.screenWidth(), 60),
-             child: DeFiRaiseAppBar(
-               isBack: true,
-               title: '',
-               actions: [
-                 Padding(
-                   padding: EdgeInsets.only(right: 25.sp),
-                   child: Container(
-                     width: 107.sp,
-                     height: 34.sp,
-                     decoration: BoxDecoration(
-                       color: AppColors.transparent,
-                       border: Border.all(
-                         color: AppColors.borderColor, // Border color
-                         width: 1, // Border width
-                       ),
-                       borderRadius: BorderRadius.circular(20), // Set border radius
-                     ),
-                     child: Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
-                       children: [
-                         SvgPicture.asset(
-                           AppIcons.headsetIcon,
-                           fit: BoxFit.scaleDown,
-                         ),
-                         HorizontalMargin(6),
-                         Text(AppTexts.needHelp,
-                             style: Config.h2(context).copyWith(
-                               fontSize: 10,
-                             )),
-                       ],
-                     ),
-                   ),
-                 )
-               ],
-             )),
+      appBar: PreferredSize(
+          preferredSize: Size(context.screenWidth(), 60),
+          child: DeFiRaiseAppBar(
+            isBack: true,
+            title: '',
+            actions: [
+              Padding(
+                padding: EdgeInsets.only(right: 25.sp),
+                child: Container(
+                  width: 107.sp,
+                  height: 34.sp,
+                  decoration: BoxDecoration(
+                    color: AppColors.transparent,
+                    border: Border.all(
+                      color: AppColors.borderColor, // Border color
+                      width: 1, // Border width
+                    ),
+                    borderRadius:
+                        BorderRadius.circular(20), // Set border radius
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        AppIcons.headsetIcon,
+                        fit: BoxFit.scaleDown,
+                      ),
+                      HorizontalMargin(6),
+                      Text(AppTexts.needHelp,
+                          style: Config.h2(context).copyWith(
+                            fontSize: 10,
+                          )),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          )),
       backgroundColor: AppColors.primaryBackgroundColor,
       body: SafeArea(
           child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-            child: Align(
-              child: Column(
-                children: [
-                  AuthHeader(
-                    title: AppTexts.createAPassword,
-                    subtitle: AppTexts.addAPasswordToKeepAccountSafe,
-                  ),
-                  VerticalMargin(20),
-                  AppTextField(
-                    isPassword: isHide.value,
-                    label: 'Enter password',
-                    controller: _passwordController,
-                    prefixIcon: SvgPicture.asset(
-                      AppIcons.lockIcon,
-                      fit: BoxFit.scaleDown,
-                    ),
-                    suffixIcon: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            isHide.value = !isHide.value;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: SvgPicture.asset(
-                            isHide.value ? AppIcons.eyeIcon : AppIcons.crossEyeIcon,
-                            color: AppColors.grey100,
-                            height: 10,
-                            width: 10,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  VerticalMargin(20),
-                  AppTextField(
-                    isPassword: isConfirmHide.value,
-                    label: 'Confirm password',
-                    controller: _confirmPasswordController,
-                    prefixIcon: SvgPicture.asset(
-                      AppIcons.lockIcon,
-                      fit: BoxFit.scaleDown,
-                    ),
-                    suffixIcon: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            isConfirmHide.value = !isConfirmHide.value;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: SvgPicture.asset(
-                            isConfirmHide.value ? AppIcons.eyeIcon : AppIcons.crossEyeIcon,
-                            color: AppColors.grey100,
-                            height: 10,
-                            width: 10,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  VerticalMargin(20),
-                  _passwordChecker(
-                    isCapital: capital.value,
-                    isNumber: number.value,
-                    isSpecial: special.value,
-                    isPasswordMatch: passwordMatch.value,
-                    isCharacterLength: chacterLength.value,
-                    enabled: enabled.value,
-                  ),
-                  Spacer(),
-                  AppButton(
-                      text: 'Continue',
-                      color: AppColors.primaryColor,
-                      textColor: AppColors.white100,
-                      onTap: (){}
-                  )
-                ],
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+        child: Align(
+          child: Column(
+            children: [
+              AuthHeader(
+                title: AppTexts.resetPassword,
+                subtitle: AppTexts.addAPasswordToKeepAccountSafe,
               ),
-            ),
-          )
-      ),
+              VerticalMargin(20),
+              AppTextField(
+                isPassword: isHide.value,
+                label: 'Enter password',
+                controller: _passwordController,
+                prefixIcon: SvgPicture.asset(
+                  AppIcons.lockIcon,
+                  fit: BoxFit.scaleDown,
+                ),
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isHide.value = !isHide.value;
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: SvgPicture.asset(
+                        isHide.value ? AppIcons.eyeIcon : AppIcons.crossEyeIcon,
+                        color: AppColors.grey100,
+                        height: 10,
+                        width: 10,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              VerticalMargin(20),
+              AppTextField(
+                isPassword: isConfirmHide.value,
+                label: 'Confirm password',
+                controller: _confirmPasswordController,
+                prefixIcon: SvgPicture.asset(
+                  AppIcons.lockIcon,
+                  fit: BoxFit.scaleDown,
+                ),
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isConfirmHide.value = !isConfirmHide.value;
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: SvgPicture.asset(
+                        isConfirmHide.value
+                            ? AppIcons.eyeIcon
+                            : AppIcons.crossEyeIcon,
+                        color: AppColors.grey100,
+                        height: 10,
+                        width: 10,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              VerticalMargin(20),
+              _passwordChecker(
+                isCapital: capital.value,
+                isNumber: number.value,
+                isSpecial: special.value,
+                isPasswordMatch: passwordMatch.value,
+                isCharacterLength: chacterLength.value,
+                enabled: enabled.value,
+              ),
+              Spacer(),
+              AppButton(
+                  text: 'Continue',
+                  color: AppColors.primaryColor,
+                  textColor: AppColors.white100,
+                  onTap: () {})
+            ],
+          ),
+        ),
+      )),
     );
   }
 
   Container _passwordChecker(
       {required bool isCapital,
-        required bool isNumber,
-        required bool isSpecial,
-        required bool isCharacterLength,
-        required bool isPasswordMatch,
-        required bool enabled}) {
+      required bool isNumber,
+      required bool isSpecial,
+      required bool isCharacterLength,
+      required bool isPasswordMatch,
+      required bool enabled}) {
     return Container(
       child: Column(children: [
         _passwordCheckerItem(
@@ -256,13 +259,9 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
               height: 12,
               width: 12,
               decoration: BoxDecoration(
-                  color: enabled ? AppColors.purpleColor: AppColors.white100,
+                  color: enabled ? AppColors.purpleColor : AppColors.white100,
                   borderRadius: BorderRadius.circular(50.0),
-                  border: Border.all(
-                      width: 1,
-                      color: AppColors.purpleColor
-                  )
-              ),
+                  border: Border.all(width: 1, color: AppColors.purpleColor)),
             ),
           ),
           HorizontalMargin(5),

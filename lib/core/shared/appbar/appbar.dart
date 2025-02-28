@@ -37,11 +37,11 @@ class DeFiRaiseAppBar extends StatelessWidget {
       actions: actions,
       leading: isBack!
           ? IconButton(
-        icon: SvgPicture.asset(AppIcons.backIcon),
-        onPressed: () {
-          context.pop();
-        },
-      )
+              icon: SvgPicture.asset(AppIcons.backIcon),
+              onPressed: () {
+                context.pop();
+              },
+            )
           : leading,
     );
   }
