@@ -27,4 +27,8 @@ class AppColors {
   static const Color textHintColor = Color(0xFFA6B7D4);
   static const Color purpleColor = Color(0xFF5A42DE);
   static const Color textBlack = Color(0xFF121212);
+  static const Color borderGrey = Color(0xFFBBBABB);
+  static const Color gradientColor = Color(0xFFEDEAFF);
+  static const Color white = Colors.white;
+  static const Color hintTextColor = Color(0xFFA6B7D4);
 }

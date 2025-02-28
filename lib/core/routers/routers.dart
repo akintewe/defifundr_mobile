@@ -15,11 +15,7 @@ class AppRouter {
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               key: state.pageKey,
-<<<<<<< Updated upstream
-              child: const PersonalAccountType(),
-=======
               child: const ContractOverview(),
->>>>>>> Stashed changes
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 return FadeTransition(

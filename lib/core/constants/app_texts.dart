@@ -130,16 +130,21 @@ class AppTexts {
   static String deadline = "Select Deadline";
   static String emptyMyCampaigns = "No Campaigns Yet";
   static String emptyMyCampaignsDescription = "Create Donation";
-
-  //! NAVIGATION
   static String home = "Home";
-  static String navDonation = "Donations";
-  static String navCampaign = "Campaigns";
-  static String navProfile = "Profile";
-
-  //! My Campaign
-  static String myCampaign = "My Campaign";
-  static String addCampaign = "Add Campaign";
+  static String roleDetails = "Role Details";
+  static String role = "Role";
+  static String seniorityLevel = "Seniority Level:";
+  static String scopeofwork = "Scope of work";
+  static String view = "View";
+  static String paymentDetails = "Payment Details";
+  static String selectedCurrencyorCoin = "Selected Currency or Coin:";
+  static String paymentrate = "Payment rate:";
+  static String paymentFrequency = "Payment Frequency:";
+  static String startDate = "Start Date:";
+  static String endDate = "End Date::";
+  static String invoiceCycle = "Invoice Cycle:";
+  static String compliance = "Compliance";
+  static String complianceDocument = "Compliance Document";
 
   //! Profile
   static String profile = "Profile";
@@ -192,6 +197,10 @@ class AppTexts {
   static String nothankyou = 'No, thank you';
   static String contractor = 'Contractor';
   static String freelancer = 'Freelancer';
+  static String contractOverview = 'Contract Overview';
+  static String basicDetails = 'Basic Details';
+  static String countryoftaxresidence = 'Country of tax residence:';
+  static String contractorName = 'Contractor Name:';
   static String tellusaboutthetypeofpersonal =
       'Tell us about the type of personal account you are trying to open ';
 
