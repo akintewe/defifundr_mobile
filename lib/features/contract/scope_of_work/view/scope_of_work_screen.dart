@@ -117,7 +117,7 @@ class _ScopeOfWorkScreenState extends State<ScopeOfWorkScreen> {
               children: [
                 Expanded(
                   child: AppButton(
-                    text: "View All",
+                    text: AppTexts.viewAll,
                     color: AppColors.secondaryTextColor,
                     textColor: AppColors.white100,
                     borderRadius: 30,
@@ -129,7 +129,7 @@ class _ScopeOfWorkScreenState extends State<ScopeOfWorkScreen> {
             
                 Expanded(
                   child: AppButton(
-                    text: "Select",
+                    text: AppTexts.select,
                     color: AppColors.black100,
                     textColor: AppColors.white100,
                     borderRadius: 30,
