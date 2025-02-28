@@ -1,8 +1,7 @@
 import 'package:defifundr_mobile/core/routers/routes_constant.dart';
 import 'package:defifundr_mobile/feature/create_password/create_password_screen.dart';
-import 'package:defifundr_mobile/features/authentication/presentation/incomplete_registration/incomplete_registration.dart';
-import 'package:defifundr_mobile/features/authentication/presentation/reset_password/reset_password_success.dart';
-import 'package:defifundr_mobile/features/authentication/presentation/type_of_account/type_of_account.dart';
+import 'package:defifundr_mobile/features/authentication/presentation/contract_overview/contract_overview.dart';
+import 'package:defifundr_mobile/features/authentication/presentation/select_id_type/select_id_type_screen.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/type_of_account/personal_account_type.dart';
 import 'package:defifundr_mobile/features/home_page/widgets/home_page.dart';
 import 'package:defifundr_mobile/features/onboarding/onboarding-screen.dart';

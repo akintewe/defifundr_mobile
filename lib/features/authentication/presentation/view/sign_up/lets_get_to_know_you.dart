@@ -52,7 +52,7 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white100,
+      backgroundColor: AppColors.primaryBackgroundColor,
       appBar: PreferredSize(
           preferredSize: Size(context.screenWidth(), 60),
           child: DeFiRaiseAppBar(
@@ -144,7 +144,8 @@ class _LetsGetToKnowYouScreenState extends State<LetsGetToKnowYouScreen> {
                           child: RichText(
                             text: TextSpan(
                               style: TextStyle(
-                                  fontSize: 12.sp, color: AppColors.grey300),
+                                  fontSize: 12.sp,
+                                  color: AppColors.grey200),
                               children: [
                                 TextSpan(text: AppTexts.tacText),
                                 TextSpan(
