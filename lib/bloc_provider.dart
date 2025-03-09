@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import 'package:defifundr_mobile/features/authentication/auth_service_locator.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/forget_password/state/bloc/forget_password_bloc.dart';
 import 'package:defifundr_mobile/features/authentication/presentation/login/states/bloc/login_state_bloc.dart';
@@ -22,6 +23,10 @@ import 'package:defifundr_mobile/features/profile/presentation/state/change_user
 import 'package:defifundr_mobile/features/profile/presentation/state/get_private_key_bloc/bloc/get_private_key_bloc.dart';
 import 'package:defifundr_mobile/features/profile/presentation/state/set_biometrics_bloc/set_biometrics_bloc_bloc.dart';
 import 'package:defifundr_mobile/features/profile/profile_service_locator.dart';
+=======
+import 'package:defifundr_mobile/screens/auth_screens/get_to_know_you_screen/bloc/lets_get_to_know_you_bloc.dart';
+import 'package:defifundr_mobile/screens/auth_screens/forgot_password/bloc/forgot_password_bloc.dart';
+>>>>>>> Stashed changes
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nested/nested.dart';
 

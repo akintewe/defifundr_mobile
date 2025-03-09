@@ -34,7 +34,11 @@ class AppButton extends StatelessWidget {
   final double? iconSize;
   final double? borderRadius;
   final Color textColor;
+<<<<<<< Updated upstream:lib/core/shared/button/buttons.dart
   final double? textSize;
+=======
+  final double? textSize, height, width;
+>>>>>>> Stashed changes:lib/core/shared/buttons/primary_button.dart
   final bool? gradient;
   final void Function()? onTap;
   final Color? borderColor;
@@ -45,15 +49,23 @@ class AppButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 5.sp, vertical: 10.sp),
       child: Container(
+<<<<<<< Updated upstream:lib/core/shared/button/buttons.dart
         height: 58.sp,
         width: (context.screenWidth() * 0.85),
+=======
+        height: height ?? 56.sp,
+>>>>>>> Stashed changes:lib/core/shared/buttons/primary_button.dart
         decoration: BoxDecoration(
           color: isActive! ? color : AppColors.grey200,
           borderRadius: BorderRadius.circular(
             borderRadius ?? (isRounded == true ? 40.sp : 15.sp)
           ),
           border: Border.all(
+<<<<<<< Updated upstream:lib/core/shared/button/buttons.dart
             width: 0.5.sp,
+=======
+            width: width ?? 0.5.sp,
+>>>>>>> Stashed changes:lib/core/shared/buttons/primary_button.dart
             color: borderColor ?? Colors.transparent,
           ),
         ),

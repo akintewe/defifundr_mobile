@@ -1,4 +1,9 @@
-part of '_routes.dart';
+import 'package:defifundr_mobile/core/routers/routes_constant.dart';
+import 'package:defifundr_mobile/screens/auth_screens/create_password/create_password_screen.dart';
+import 'package:defifundr_mobile/screens/auth_screens/get_started/view/get_started.dart';
+import 'package:defifundr_mobile/screens/home/contract/presentation/view/compliance-page.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -47,7 +52,26 @@ class AppRouter {
       ),
       GoRoute(
           path: '/',
+          name: RouteConstants.compliance,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              key: state.pageKey,
+              child: const ComplianceScreen(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc)
+                      .animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
+        ),
+        GoRoute(
+          path: '/',
           name: RouteConstants.initial,
+<<<<<<< Updated upstream
           builder: (context, state) => PasscodeScreen(
                 key: state.pageKey,
               ),
@@ -182,6 +206,36 @@ class AppRouter {
                       child: child,
                     );
                   },
+=======
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              key: state.pageKey,
+              child: const GetStartedScreen(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc)
+                      .animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
+        ),
+        GoRoute(
+          path: '/',
+          name: RouteConstants.createPassword,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              key: state.pageKey,
+              child: const CreatePasswordScreen(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc)
+                      .animate(animation),
+                  child: child,
+>>>>>>> Stashed changes
                 );
               },
             ),

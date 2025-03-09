@@ -1,11 +1,15 @@
 import 'package:defifundr_mobile/bloc_provider.dart';
+<<<<<<< Updated upstream
 import 'package:defifundr_mobile/core/routers/_routes.dart';
+=======
+import 'package:defifundr_mobile/core/routers/routers.dart';
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+<<<<<<< Updated upstream
 class MyApp extends ConsumerStatefulWidget {
   const MyApp({super.key});
 
@@ -14,6 +18,16 @@ class MyApp extends ConsumerStatefulWidget {
 }
 
 class _MyAppState extends ConsumerState<MyApp> {
+=======
+class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+>>>>>>> Stashed changes
   @override
   void initState() {
     SystemChrome.setSystemUIOverlayStyle(
@@ -23,7 +37,6 @@ class _MyAppState extends ConsumerState<MyApp> {
         systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
-
     super.initState();
   }
 
