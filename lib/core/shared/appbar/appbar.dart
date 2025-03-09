@@ -1,11 +1,11 @@
-// 🐦 Flutter imports:
-import 'package:defifundr_mobile/core/global/constants/app_icons.dart';
-import 'package:defifundr_mobile/core/global/constants/size.dart';
-import 'package:defifundr_mobile/core/global/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../constants/app_icons.dart';
+import '../../constants/size.dart';
+import '../../themes/color_scheme.dart';
 
 class DeFiRaiseAppBar extends StatelessWidget {
   final String? title;
@@ -24,7 +24,8 @@ class DeFiRaiseAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.white200,
+      backgroundColor: AppColors.primaryBackgroundColor,
+      scrolledUnderElevation: 0,
       elevation: 0,
       centerTitle: true,
       automaticallyImplyLeading: false,
@@ -37,7 +38,7 @@ class DeFiRaiseAppBar extends StatelessWidget {
       actions: actions,
       leading: isBack!
           ? IconButton(
-              icon: SvgPicture.asset(AppIcons.back),
+              icon: SvgPicture.asset(AppIcons.backIcon),
               onPressed: () {
                 context.pop();
               },

@@ -1,24 +1,10 @@
 import 'package:defifundr_mobile/bloc_provider.dart';
-<<<<<<< Updated upstream
-import 'package:defifundr_mobile/core/routers/_routes.dart';
-=======
 import 'package:defifundr_mobile/core/routers/routers.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-<<<<<<< Updated upstream
-class MyApp extends ConsumerStatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  ConsumerState<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends ConsumerState<MyApp> {
-=======
 class App extends StatefulWidget {
   const App({super.key});
 
@@ -27,7 +13,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
->>>>>>> Stashed changes
   @override
   void initState() {
     SystemChrome.setSystemUIOverlayStyle(
