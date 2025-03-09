@@ -29,7 +29,6 @@ class RouteConstants {
   static String walletConfirmation = 'walletConfirmation';
   static String pasteYourRecoveryPhrase = 'pasteYourRecoveryPhrase';
   static String selectNationality = 'selectNationality';
-<<<<<<<< HEAD:lib/core/routers/routes_constant.dart
   static String verifyBVN = 'verifyBVN';
   static String verifyNIN = 'verifyNIN';
   static String createPassword = 'createPassword';
@@ -40,6 +39,4 @@ class RouteConstants {
   static const String contractDetails = 'contractDetails';
   static const String verifyOtp = 'verifyOtp';
   static const String compliance = 'compliance';
-========
->>>>>>>> 786398e25766a3e4d7756dba987c1c69e55de268:lib/core/routers/routes_constants.dart
 }
