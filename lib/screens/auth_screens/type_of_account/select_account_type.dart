@@ -1,3 +1,4 @@
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class SelectAccountType extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Config.h2(context).copyWith(fontSize: 14),
+                  style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
                 ),
                 SizedBox(
                   height: 29,
@@ -59,7 +60,7 @@ class SelectAccountType extends StatelessWidget {
               padding: const EdgeInsets.only(right: 10),
               child: Text(
                 description,
-                style: Config.h3(context).copyWith(fontSize: 12),
+                style: DefiFundrFonts.h3(context).copyWith(fontSize: 12),
               ),
             ),
           ],

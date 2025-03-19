@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/shared/textfield/app_text_field.dart';
@@ -89,11 +90,11 @@ class _ResetEmailScreenState extends State<ForgotPasswordScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(AppTexts.forgotPassword,
-                                style:
-                                    Config.h2(context).copyWith(fontSize: 24)),
+                                style: DefiFundrFonts.h2(context)
+                                    .copyWith(fontSize: 24)),
                             VerticalMargin(5),
                             Text(AppTexts.forgotPasswordDesc,
-                                style: Config.b3(context).copyWith(
+                                style: DefiFundrFonts.b3(context).copyWith(
                                   color: AppColors.grey100,
                                 )),
                             VerticalMargin(50),

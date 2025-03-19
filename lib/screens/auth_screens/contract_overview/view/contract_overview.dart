@@ -1,4 +1,5 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -38,7 +39,7 @@ class _ContractOverviewState extends State<ContractOverview> {
               alignment: Alignment.center,
               child: Text(
                 AppTexts.contractOverview,
-                style: Config.h2(context).copyWith(fontSize: 26),
+                style: DefiFundrFonts.h2(context).copyWith(fontSize: 26),
               ),
             ),
             SizedBox(height: 24),
@@ -101,7 +102,7 @@ class _ContractPaymentDetailssState extends State<ContractPaymentDetails> {
           children: [
             Text(
               AppTexts.paymentDetails,
-              style: Config.h2(context).copyWith(fontSize: 14),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
             ),
             SizedBox(height: 9),
             InfoField(
@@ -158,7 +159,7 @@ class ContractRoleDetails extends StatelessWidget {
           children: [
             Text(
               AppTexts.roleDetails,
-              style: Config.h2(context).copyWith(fontSize: 14),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
             ),
             SizedBox(height: 9),
             InfoField(
@@ -196,18 +197,21 @@ class ContractRoleDetails extends StatelessWidget {
                         children: [
                           Text(
                             AppTexts.scopeofwork,
-                            style: Config.h2(context).copyWith(fontSize: 14),
+                            style: DefiFundrFonts.h2(context)
+                                .copyWith(fontSize: 14),
                           ),
                           SizedBox(height: 20),
                           Text(
                             AppTexts.view,
-                            style: Config.h2(context).copyWith(fontSize: 14),
+                            style: DefiFundrFonts.h2(context)
+                                .copyWith(fontSize: 14),
                           ),
                         ],
                       ),
                       Text(
                         "Work Duty and Professional Compliance Team Member Duties and ResponsibilitiesProfessional Conduct Standards: [Standards team members must adhere to",
-                        style: Config.h2(context).copyWith(fontSize: 12),
+                        style:
+                            DefiFundrFonts.h2(context).copyWith(fontSize: 12),
                       ),
                     ],
                   ),
@@ -242,14 +246,14 @@ class ContractComplainceDocument extends StatelessWidget {
           children: [
             Text(
               AppTexts.complianceDocument,
-              style: Config.h2(context).copyWith(fontSize: 14),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   AppTexts.machinelearningcomplincePDF,
-                  style: Config.h2(context).copyWith(fontSize: 10),
+                  style: DefiFundrFonts.h2(context).copyWith(fontSize: 10),
                 ),
                 Container(
                   height: 19,
@@ -261,7 +265,7 @@ class ContractComplainceDocument extends StatelessWidget {
                   child: Center(
                     child: Text(
                       AppTexts.view,
-                      style: Config.h2(context)
+                      style: DefiFundrFonts.h2(context)
                           .copyWith(fontSize: 9, color: AppColors.white100),
                     ),
                   ),
@@ -296,7 +300,7 @@ class ContractComplaince extends StatelessWidget {
           children: [
             Text(
               AppTexts.compliance,
-              style: Config.h2(context).copyWith(fontSize: 14),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
             ),
             SizedBox(height: 20),
             Container(
@@ -313,7 +317,7 @@ class ContractComplaince extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Text(
                   "Work Duty and Professional Compliance Team Member Duties and ResponsibilitiesProfessional Conduct Standards: [Standards team members must adhere to",
-                  style: Config.h2(context).copyWith(fontSize: 12),
+                  style: DefiFundrFonts.h2(context).copyWith(fontSize: 12),
                 ),
               ),
             ),
@@ -343,7 +347,7 @@ class ContractBasicDetails extends StatelessWidget {
           children: [
             Text(
               AppTexts.basicDetails,
-              style: Config.h2(context).copyWith(fontSize: 14),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 14),
             ),
             SizedBox(height: 9),
             InfoField(

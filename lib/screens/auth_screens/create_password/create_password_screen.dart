@@ -2,6 +2,7 @@
 
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
@@ -109,7 +110,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     ),
                     HorizontalMargin(6),
                     Text(AppTexts.needHelp,
-                        style: Config.h2(context).copyWith(
+                        style: DefiFundrFonts.h2(context).copyWith(
                           fontSize: 10,
                         )),
                   ],
@@ -265,7 +266,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
           ),
           HorizontalMargin(5),
           Text(text,
-              style: Config.b3(context).copyWith(
+              style: DefiFundrFonts.b3(context).copyWith(
                 color: AppColors.secondaryTextColor,
               )),
         ],

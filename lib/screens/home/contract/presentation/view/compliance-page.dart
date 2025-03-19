@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/utils/image_picker.dart';
@@ -51,7 +52,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
                 border: Border.all(color: Color(0xff081A5F), width: 4)),
             child: Text(
               "100%",
-              style: Config.b3(context).copyWith(
+              style: DefiFundrFonts.b3(context).copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: 10.sp,
               ),
@@ -67,7 +68,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
             children: [
               Text(
                 'Compliance',
-                style: Config.h1(context).copyWith(
+                style: DefiFundrFonts.h1(context).copyWith(
                   fontWeight: FontWeight.w700,
                   fontSize: 26.sp,
                 ),
@@ -75,7 +76,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
               SizedBox(height: 3.h),
               Text(
                 'Create a Fixed Rate contract for individual contractors for your company',
-                style: Config.b3(context).copyWith(
+                style: DefiFundrFonts.b3(context).copyWith(
                     fontWeight: FontWeight.w400,
                     fontSize: 16.sp,
                     color: Color(0xff505780)),
@@ -94,13 +95,13 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
                   children: [
                     Text(
                       'Agreement',
-                      style: Config.h3(context).copyWith(
+                      style: DefiFundrFonts.h3(context).copyWith(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                     SizedBox(height: 4.h),
                     Text(
                       'use our locally compliant contract, custom templates or upload your own contract that has already been signed.',
-                      style: Config.b3(context).copyWith(
+                      style: DefiFundrFonts.b3(context).copyWith(
                           fontWeight: FontWeight.w400,
                           fontSize: 16.sp,
                           color: Color(0xff505780)),
@@ -124,7 +125,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
 
               Text(
                 'Write Your Compliance',
-                style: Config.h3(context)
+                style: DefiFundrFonts.h3(context)
                     .copyWith(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
               SizedBox(height: 8.h),
@@ -162,7 +163,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
 
               Text(
                 'Upload Compliance',
-                style: Config.h3(context)
+                style: DefiFundrFonts.h3(context)
                     .copyWith(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
               SizedBox(height: 8.h),
@@ -191,7 +192,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
                           file != null
                               ? file.getPreview(length: 5)
                               : 'Upload Compliance',
-                          style: Config.h3(context).copyWith(
+                          style: DefiFundrFonts.h3(context).copyWith(
                               fontWeight: FontWeight.w500, fontSize: 16.sp),
                         ),
                       ),
@@ -217,7 +218,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
 
               Text(
                 'Upload Signature',
-                style: Config.h3(context)
+                style: DefiFundrFonts.h3(context)
                     .copyWith(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
               SizedBox(height: 8.h),
@@ -249,7 +250,7 @@ class _ComplianceScreenState extends State<ComplianceScreen> {
                               file != null
                                   ? file.getPreview(length: 5)
                                   : 'Upload Signature',
-                              style: Config.h3(context).copyWith(
+                              style: DefiFundrFonts.h3(context).copyWith(
                                   fontWeight: FontWeight.w500, fontSize: 16.sp),
                             ),
                           );
@@ -330,7 +331,7 @@ class SelectComplianceTypeListTile<T> extends StatelessWidget {
                 ),
                 Text(
                   titleBuilder(item),
-                  style: Config.b2(context).copyWith(
+                  style: DefiFundrFonts.b2(context).copyWith(
                       fontWeight: FontWeight.w400,
                       fontSize: 14.sp,
                       color: item != value ? Color(0xFFBABABA) : null),

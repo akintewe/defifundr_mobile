@@ -1,11 +1,11 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:defifundr_mobile/screens/home/contract/scope_of_work/view/widget/expandable_container.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ScopeOfWorkScreen extends StatefulWidget {
@@ -71,13 +71,13 @@ class _ScopeOfWorkScreenState extends State<ScopeOfWorkScreen> {
               children: [
                 Text(
                   AppTexts.scopeOfWork,
-                  style: Config.h2(context)
+                  style: DefiFundrFonts.h2(context)
                       .copyWith(fontSize: 26, color: AppColors.titleBlack),
                 ),
                 VerticalMargin(5),
                 Text(
                   AppTexts.createFixedRateContract,
-                  style: Config.b3(context)
+                  style: DefiFundrFonts.b3(context)
                       .copyWith(color: AppColors.subtitleGrey, fontSize: 14),
                 ),
                 VerticalMargin(20),
@@ -93,7 +93,7 @@ class _ScopeOfWorkScreenState extends State<ScopeOfWorkScreen> {
                         subtitle: jobRole['level'] ?? "Unknown Level",
                         content: Text(
                           jobRole['content'] ?? "No Content",
-                          style: Config.h2(context).copyWith(
+                          style: DefiFundrFonts.h2(context).copyWith(
                               fontSize: 11,
                               color: AppColors.secondaryTextColor,
                               fontWeight: FontWeight.w600),
@@ -126,7 +126,6 @@ class _ScopeOfWorkScreenState extends State<ScopeOfWorkScreen> {
                     onTap: () {},
                   ),
                 ),
-            
                 Expanded(
                   child: AppButton(
                     text: AppTexts.select,

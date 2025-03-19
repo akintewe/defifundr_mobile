@@ -1,5 +1,5 @@
 import 'package:defifundr_mobile/core/constants/assets.dart';
-import 'package:defifundr_mobile/core/constants/size.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +29,7 @@ class DeFiRaiseAppBar extends StatelessWidget {
       centerTitle: true,
       automaticallyImplyLeading: false,
       title: Text(title ?? '',
-          style: Config.b1(context).copyWith(
+          style: DefiFundrFonts.b1(context).copyWith(
             color: AppColors.primaryColor,
             fontWeight: FontWeight.w400,
             fontSize: 15.sp,

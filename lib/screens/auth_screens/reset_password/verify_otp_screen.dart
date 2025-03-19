@@ -1,4 +1,5 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
@@ -50,7 +51,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                 ),
                 Text(
                   'test@defifundr.com',
-                  style: Config.b3(context).copyWith(
+                  style: DefiFundrFonts.b3(context).copyWith(
                     color: AppColors.black200,
                   ),
                 ),
