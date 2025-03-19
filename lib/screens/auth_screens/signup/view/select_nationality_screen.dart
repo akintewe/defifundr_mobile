@@ -1,7 +1,9 @@
+// ignore_for_file: library_private_types_in_public_api
+
+import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:country_picker/country_picker.dart';
-import 'package:defifundr_mobile/core/global/constants/app_texts.dart';
-import 'package:defifundr_mobile/core/global/constants/color_scheme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SelectNationalityScreen extends StatefulWidget {
@@ -156,7 +158,7 @@ class _SelectNationalityScreen extends State<SelectNationalityScreen> {
                   // Handle continue button press
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                child: const Text(AppTexts.continueButton, style: TextStyle(color: Colors.white)),
+                child:  Text(AppTexts.continueButton, style: TextStyle(color: Colors.white)),
               ),
             ),
           ],

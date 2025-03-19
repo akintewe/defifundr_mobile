@@ -1,3 +1,5 @@
+import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -6,9 +8,6 @@ import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../core/constants/app_icons.dart';
-import '../../../core/constants/app_texts.dart';
 
 class VerifyWithDriversCard extends StatefulWidget {
   const VerifyWithDriversCard({super.key});
@@ -44,7 +43,7 @@ class _VerifyWithDriversCardState extends State<VerifyWithDriversCard> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      AppIcons.headsetIcon,
+                      AppAssets.headsetIcon,
                       fit: BoxFit.scaleDown,
                     ),
                     HorizontalMargin(6),
@@ -71,7 +70,7 @@ class _VerifyWithDriversCardState extends State<VerifyWithDriversCard> {
             children: [
               VerticalMargin(20),
               Image.asset(
-                AppIcons.driversCard,
+                AppAssets.driversCard,
                 fit: BoxFit.cover,
               ),
               VerticalMargin(20),
@@ -95,7 +94,7 @@ class _VerifyWithDriversCardState extends State<VerifyWithDriversCard> {
                 label: 'Enter driver licence ID',
                 controller: TextEditingController(),
                 prefixIcon: SvgPicture.asset(
-                  AppIcons.userIcon,
+                  AppAssets.userIcon,
                   fit: BoxFit.scaleDown,
                 ),
               ),

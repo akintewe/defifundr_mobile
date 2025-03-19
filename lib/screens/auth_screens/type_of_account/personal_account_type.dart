@@ -1,5 +1,5 @@
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -51,7 +51,7 @@ class _PersonalAccountTypeState extends State<PersonalAccountType> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      AppIcons.headsetIcon,
+                      AppAssets.headsetIcon,
                       fit: BoxFit.scaleDown,
                     ),
                     HorizontalMargin(6),

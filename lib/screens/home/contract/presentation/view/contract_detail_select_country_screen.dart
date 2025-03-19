@@ -1,15 +1,14 @@
 import 'package:country_picker/country_picker.dart';
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
+import 'package:defifundr_mobile/core/shared/textfield/app_text_field.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../../../core/shared/textfield/app_text_field.dart';
-import '../../../../../core/themes/color_scheme.dart';
 
 class ContractDetailSelectCountryScreen extends StatefulWidget {
   const ContractDetailSelectCountryScreen({super.key});
@@ -35,7 +34,7 @@ class _ContractDetailSelectCountryScreenState
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: SvgPicture.asset(
-                  AppIcons.twentyFivePercent,
+                  AppAssets.twentyFivePercent,
                   fit: BoxFit.scaleDown,
                 ),
               )
@@ -61,7 +60,7 @@ class _ContractDetailSelectCountryScreenState
                     label: AppTexts.contractName,
                     controller: TextEditingController(),
                     prefixIcon: SvgPicture.asset(
-                      AppIcons.userEdit,
+                      AppAssets.userEdit,
                       fit: BoxFit.scaleDown,
                     ),
                   ),

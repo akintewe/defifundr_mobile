@@ -1,5 +1,5 @@
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -25,7 +25,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
-          icon: SvgPicture.asset(AppIcons.backIcon),
+          icon: SvgPicture.asset(AppAssets.backIcon),
           onPressed: () {
             context.pop();
           },
@@ -48,7 +48,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
-                    AppIcons.headsetIcon,
+                    AppAssets.headsetIcon,
                     fit: BoxFit.scaleDown,
                   ),
                   HorizontalMargin(6),
@@ -69,7 +69,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           decoration: BoxDecoration(
               image: DecorationImage(
             image: AssetImage(
-              AppIcons.gradientBackground,
+              AppAssets.gradientBackground,
             ),
             fit: BoxFit.cover,
           )),
@@ -96,16 +96,17 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       label: 'test@defifundr.com',
                       controller: _emailController,
                       prefixIcon: SvgPicture.asset(
-                        AppIcons.userIcon,
+                        AppAssets.userIcon,
                         fit: BoxFit.scaleDown,
                       ),
                     ),
                     VerticalMargin(30),
                     AppButton(
-                        text: AppTexts.continuee,
-                        color: AppColors.primaryColor,
-                        textColor: AppColors.white100,
-                        onTap: () {})
+                      text: AppTexts.continuee,
+                      color: AppColors.primaryColor,
+                      textColor: AppColors.white100,
+                      onTap: () {},
+                    )
                   ],
                 ),
               ),

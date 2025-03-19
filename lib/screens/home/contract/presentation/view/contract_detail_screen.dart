@@ -1,13 +1,12 @@
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../../../core/themes/color_scheme.dart';
 
 class ContractDetailScreen extends StatefulWidget {
   const ContractDetailScreen({super.key});
@@ -29,7 +28,7 @@ class _ContractDetailScreenState extends State<ContractDetailScreen> {
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: SvgPicture.asset(
-                  AppIcons.zeroPercent,
+                  AppAssets.zeroPercent,
                   fit: BoxFit.scaleDown,
                 ),
               )
