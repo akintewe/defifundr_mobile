@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
@@ -84,7 +85,7 @@ class _ContractDetailScreenState extends State<ContractDetailScreen> {
         children: [
           Text(
             tile,
-            style: Config.b2(context).copyWith(
+            style: DefiFundrFonts.b2(context).copyWith(
                 fontWeight: FontWeight.w500,
                 fontSize: 14,
                 color: AppColors.subHeadingBlack),
@@ -92,7 +93,7 @@ class _ContractDetailScreenState extends State<ContractDetailScreen> {
           VerticalMargin(5),
           Text(
             subTitle,
-            style: Config.b3(context).copyWith(
+            style: DefiFundrFonts.b3(context).copyWith(
               color: AppColors.subTitleGray,
             ),
           ),

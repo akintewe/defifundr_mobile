@@ -1,8 +1,7 @@
+import 'package:defifundr_mobile/core/constants/fonts.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../../constants/size.dart';
-import '../../themes/color_scheme.dart';
 
 class AppTextField extends StatefulWidget {
   final String label;
@@ -70,7 +69,7 @@ class _AppTextFieldState extends State<AppTextField> {
               controller: widget.controller,
               obscureText: widget.isPassword,
               focusNode: widget.focusNode ?? _focusNode,
-              style: Config.b2(context).copyWith(
+              style: DefiFundrFonts.b2(context).copyWith(
                 color: AppColors.primaryColor,
               ),
               obscuringCharacter: '*',
@@ -78,7 +77,7 @@ class _AppTextFieldState extends State<AppTextField> {
               keyboardType: widget.keyboardType,
               decoration: InputDecoration(
                 labelText: widget.label,
-                labelStyle: Config.b3(context).copyWith(
+                labelStyle: DefiFundrFonts.b3(context).copyWith(
                   color: AppColors.textHintColor,
                 ),
                 filled: true,

@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -54,7 +55,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   HorizontalMargin(6),
                   Text(
                     AppTexts.needHelp,
-                    style: Config.h2(context).copyWith(
+                    style: DefiFundrFonts.h2(context).copyWith(
                       fontSize: 10,
                     ),
                   ),
@@ -86,7 +87,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     ),
                     Text(
                       AppTexts.theProcessIsSimpler,
-                      style: Config.b3(context).copyWith(
+                      style: DefiFundrFonts.b3(context).copyWith(
                         color: AppColors.grey100,
                       ),
                     ),

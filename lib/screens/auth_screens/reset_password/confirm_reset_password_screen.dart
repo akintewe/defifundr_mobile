@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -39,14 +40,14 @@ class _ConfirmResetPasswordScreenState
                   children: [
                     Text(
                       AppTexts.passwordReset,
-                      style: Config.h2(context).copyWith(
+                      style: DefiFundrFonts.h2(context).copyWith(
                         fontSize: 26,
                       ),
                     ),
                     Text(
                       textAlign: TextAlign.center,
                       AppTexts.passwordResetSuccessfully,
-                      style: Config.b3(context).copyWith(
+                      style: DefiFundrFonts.b3(context).copyWith(
                         color: AppColors.grey100,
                       ),
                     ),

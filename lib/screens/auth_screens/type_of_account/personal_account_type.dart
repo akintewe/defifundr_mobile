@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -57,7 +58,7 @@ class _PersonalAccountTypeState extends State<PersonalAccountType> {
                     HorizontalMargin(6),
                     Text(
                       AppTexts.needHelp,
-                      style: Config.h2(context).copyWith(
+                      style: DefiFundrFonts.h2(context).copyWith(
                         fontSize: 10,
                       ),
                     ),
@@ -76,11 +77,11 @@ class _PersonalAccountTypeState extends State<PersonalAccountType> {
             SizedBox(height: 51),
             Text(
               AppTexts.whattypeofpersonalaccount,
-              style: Config.h2(context).copyWith(fontSize: 26),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 26),
             ),
             Text(
               AppTexts.tellusaboutthetypeofpersonal,
-              style: Config.h2(context).copyWith(fontSize: 12),
+              style: DefiFundrFonts.h2(context).copyWith(fontSize: 12),
             ),
             SizedBox(height: 23),
             SelectAccountType(

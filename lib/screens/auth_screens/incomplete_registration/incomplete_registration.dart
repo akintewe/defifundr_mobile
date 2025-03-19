@@ -1,5 +1,6 @@
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
 import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
@@ -39,7 +40,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text(
                     AppTexts.incompleteRegistration,
-                    style: Config.h2(context).copyWith(fontSize: 26),
+                    style: DefiFundrFonts.h2(context).copyWith(fontSize: 26),
                   ),
                 ),
                 SizedBox(height: 3),
@@ -50,7 +51,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                     child: Text(
                       textAlign: TextAlign.center,
                       AppTexts.weNotifiedthatyourprofilewasnot,
-                      style: Config.h2(context).copyWith(fontSize: 12),
+                      style: DefiFundrFonts.h2(context).copyWith(fontSize: 12),
                     ),
                   ),
                 ),
@@ -70,8 +71,7 @@ class IncompleteRegistartionScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text(
                     AppTexts.nothankyou,
-                   
-                    style: Config.h2(context).copyWith(fontSize: 16),
+                    style: DefiFundrFonts.h2(context).copyWith(fontSize: 16),
                   ),
                 ),
               ],

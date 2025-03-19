@@ -1,3 +1,4 @@
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -73,7 +74,7 @@ class AppButton extends StatelessWidget {
               const HorizontalMargin(5),
               Text(
                 text,
-                style: Config.b1(context).copyWith(
+                style: DefiFundrFonts.b1(context).copyWith(
                   color: isActive! ? textColor : AppColors.white100,
                   fontSize: textSize,
                   fontWeight: FontWeight.bold,

@@ -1,7 +1,6 @@
+import 'package:defifundr_mobile/core/constants/fonts.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
-
-import '../constants/size.dart';
-import '../themes/color_scheme.dart';
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({super.key, required this.title, required this.subtitle});
@@ -15,13 +14,13 @@ class AuthHeader extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Config.h2(context).copyWith(
+          style: DefiFundrFonts.h2(context).copyWith(
             fontSize: 26,
           ),
         ),
         Text(
           subtitle,
-          style: Config.b3(context).copyWith(
+          style: DefiFundrFonts.b3(context).copyWith(
             color: AppColors.grey100,
           ),
         ),

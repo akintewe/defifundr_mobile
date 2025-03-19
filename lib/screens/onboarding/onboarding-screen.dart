@@ -1,5 +1,5 @@
 import 'package:defifundr_mobile/core/constants/assets.dart';
-import 'package:defifundr_mobile/core/constants/size.dart';
+import 'package:defifundr_mobile/core/constants/fonts.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
 import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
@@ -95,7 +95,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         children: [
                           Text(
                             "For Freelancers",
-                            style: Config.h2(context).copyWith(
+                            style: DefiFundrFonts.h2(context).copyWith(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14.sp,
                                 color: currentIndex == 0
@@ -145,7 +145,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                             Text(
                               screens[index].title!,
                               textAlign: TextAlign.left,
-                              style: Config.h2(context).copyWith(
+                              style: DefiFundrFonts.h2(context).copyWith(
                                   fontWeight: FontWeight.w700,
                                   color: currentIndex == 0
                                       ? AppColors.white100
@@ -157,7 +157,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                             Text(
                               screens[index].text!,
                               textAlign: TextAlign.left,
-                              style: Config.b2(context).copyWith(
+                              style: DefiFundrFonts.b2(context).copyWith(
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w400,
                                   color: currentIndex == 0
