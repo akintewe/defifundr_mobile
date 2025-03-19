@@ -1,11 +1,10 @@
+import 'package:defifundr_mobile/core/constants/assets.dart';
+import 'package:defifundr_mobile/core/constants/size.dart';
+import 'package:defifundr_mobile/core/themes/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../constants/app_icons.dart';
-import '../../constants/size.dart';
-import '../../themes/color_scheme.dart';
 
 class DeFiRaiseAppBar extends StatelessWidget {
   final String? title;
@@ -38,7 +37,7 @@ class DeFiRaiseAppBar extends StatelessWidget {
       actions: actions,
       leading: isBack!
           ? IconButton(
-              icon: SvgPicture.asset(AppIcons.backIcon),
+              icon: SvgPicture.asset(AppAssets.backIcon),
               onPressed: () {
                 context.pop();
               },

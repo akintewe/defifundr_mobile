@@ -14,14 +14,26 @@ class AppAssets {
   static String downArrow = '${defifundrIconPath}arrow_down.svg';
   static String backgroundImage = '${defifundrIconPath}background.png';
   static String bvnSuffixIcon = '${defifundrIconPath}bvn_suffix.svg';
-  static String ninSlipImage = '${defifundrIconPath}/nin_slip.png';
+  static String ninSlipImage = '$defifundrIconPath/nin_slip.png';
   static String person = '${defifundrIconPath}person.svg';
   static String crossEye = '${defifundrIconPath}cross_eye.svg';
   static String arrowRightCurve = '${defifundrIconPath}arrow_right.svg';
+  static String backIcon = '${defifundrIconPath}back_icon.svg';
+  static String headsetIcon = '${defifundrIconPath}headset_icon.svg';
+  static String lockIcon = '${defifundrIconPath}lock_icon.svg';
+  static String eyeIcon = '${defifundrIconPath}eye_icon.svg';
+  static String crossEyeIcon = '${defifundrIconPath}cross_eye.svg';
+  static String userEdit = '${defifundrIconPath}user_edit.svg';
+  static String zeroPercent = '${defifundrIconPath}zero_percent.svg';
+  static String twentyFivePercent =
+      '${defifundrIconPath}twenty_five_percent.svg';
 
   //-------------------------------------------- IMAGES -------------------------------------------- //
   static const defifundrImagePath = 'assets/images';
-
+  static String people = '${defifundrImagePath}people.png';
+  static String gradientBackground =
+      '${defifundrImagePath}gradientBackground.png';
+  static String driversCard = '${defifundrImagePath}drivers_card.png';
   static const onBoardingBg1 = '$defifundrImagePath/onboarding-bg1.png';
   static const onBoardingBg2 = '$defifundrImagePath/onboarding-bg2.png';
   static const onBoardingFrame1 = '$defifundrImagePath/frame1.png';
@@ -34,14 +46,13 @@ class AppAssets {
   static const logo = '$defifundrImagePath/logo.png';
   static const rocket = '$defifundrImagePath/rocket.png';
   static const backgroundnewImagePath = '$defifundrImagePath/backgroundnew.png';
-  static const incompleteRegistrationImagePath = '$defifundrIconPath/incompletRegistration.svg';
+  static const incompleteRegistrationImagePath =
+      '$defifundrIconPath/incompletRegistration.svg';
   static const closeIcon = '$defifundrIconPath/close.svg';
-  static const lockIcon = '$defifundrIconPath/lock_icon.svg';
   static const groupIcon = '$defifundrIconPath/group.svg';
   static const eclipse = '$defifundrImagePath/eclipse.svg';
   static const tether = '$defifundrImagePath/tether.svg';
   static const cloud = '$defifundrImagePath/cloud.png';
-
   static const home = '$defifundrImagePath/home.svg';
   static const noTransaction = '$defifundrImagePath/noTransaction.svg';
   static const profile = '$defifundrImagePath/profile.png';

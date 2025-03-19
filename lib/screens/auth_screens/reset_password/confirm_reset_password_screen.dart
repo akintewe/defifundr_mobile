@@ -1,5 +1,5 @@
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/buttons/primary_button.dart';
@@ -52,12 +52,13 @@ class _ConfirmResetPasswordScreenState
                     ),
                   ],
                 ),
-                Image.asset(AppIcons.people),
+                Image.asset(AppAssets.people),
                 AppButton(
-                    text: AppTexts.continuee,
-                    color: AppColors.primaryColor,
-                    textColor: AppColors.white100,
-                    onTap: () {})
+                  text: AppTexts.continuee,
+                  color: AppColors.primaryColor,
+                  textColor: AppColors.white100,
+                  onTap: () {},
+                )
               ],
             ),
           ),

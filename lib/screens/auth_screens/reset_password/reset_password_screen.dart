@@ -1,5 +1,7 @@
-import 'package:defifundr_mobile/core/constants/app_icons.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:defifundr_mobile/core/constants/app_texts.dart';
+import 'package:defifundr_mobile/core/constants/assets.dart';
 import 'package:defifundr_mobile/core/constants/size.dart';
 import 'package:defifundr_mobile/core/shared/appbar/appbar.dart';
 import 'package:defifundr_mobile/core/shared/auth_header.dart';
@@ -102,7 +104,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 label: AppTexts.enterPassword,
                 controller: _passwordController,
                 prefixIcon: SvgPicture.asset(
-                  AppIcons.lockIcon,
+                  AppAssets.lockIcon,
                   fit: BoxFit.scaleDown,
                 ),
                 suffixIcon: Padding(
@@ -116,7 +118,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(3.0),
                       child: SvgPicture.asset(
-                        isHide.value ? AppIcons.crossEyeIcon : AppIcons.eyeIcon,
+                        isHide.value
+                            ? AppAssets.crossEyeIcon
+                            : AppAssets.eyeIcon,
                         color: AppColors.grey100,
                         height: 10,
                         width: 10,
@@ -131,7 +135,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 label: AppTexts.confirmPassword,
                 controller: _confirmPasswordController,
                 prefixIcon: SvgPicture.asset(
-                  AppIcons.lockIcon,
+                  AppAssets.lockIcon,
                   fit: BoxFit.scaleDown,
                 ),
                 suffixIcon: Padding(
@@ -146,8 +150,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                       padding: const EdgeInsets.all(3.0),
                       child: SvgPicture.asset(
                         isConfirmHide.value
-                            ? AppIcons.crossEyeIcon
-                            : AppIcons.eyeIcon,
+                            ? AppAssets.crossEyeIcon
+                            : AppAssets.eyeIcon,
                         color: AppColors.grey100,
                         height: 10,
                         width: 10,
